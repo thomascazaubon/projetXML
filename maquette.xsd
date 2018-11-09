@@ -1,2 +1,62 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name ="Epreuve">
+    <xs:attribute name="idEpreuve" type="xs:ID"/>
+		<xs:attribute name="nomEpreuve" type="xs:string"/>
+		<xs:attribute name="coefEpreuve" type="xs:integer"/>
+		<xs:attribute name="natureEpreuve" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name ="UE">
+    <xs:attribute name="idUE" type="xs:ID"/>
+		<xs:attribute name="intituleUE" type="xs:string"/>
+		<xs:attribute name="heuresCMUE" type="xs:decimal"/>
+    <xs:attribute name="heuresTDUE" type="xs:decimal"/>
+    <xs:attribute name="heuresTPUE" type="xs:decimal"/>
+  </xs:complexType>
+
+  <xs:complexType name ="Competence">
+    <xs:attribute name="idCompetence" type="xs:ID"/>
+		<xs:attribute name="nomCompetence" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name ="Enseignant">
+    <xs:attribute name="idEnseignant" type="xs:ID"/>
+		<xs:attribute name="nomEnseignant" type="xs:string"/>
+    <xs:attribute name="prenomEnseignant" type="xs:string"/>
+    <xs:attribute name="emailEnseignant" type="xs:string"/>
+    <xs:attribute name="gradeEnseignant" type="xs:string"/>
+    <xs:attribute name="bureauEnseignant" type="xs:string"/>
+    <xs:attribute name="telEnseignant" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name ="Departement">
+    <xs:attribute name="idDepartement" type="xs:ID"/>
+    <xs:attribute name="nomDepartement" type="xs:string"/>
+    <xs:attribute name="acronymeDepartement" type="xs:string"/>
+    <xs:attribute name="dateCreationDepartement" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name ="Enseignant">
+    <xs:attribute name="idEnseignant" type="xs:ID"/>
+		<xs:attribute name="nomEnseignant" type="xs:string"/>
+    <xs:attribute name="prenomEnseignant" type="xs:string"/>
+    <xs:attribute name="emailEnseignant" type="xs:string"/>
+    <xs:attribute name="gradeEnseignant" type="xs:string"/>
+    <xs:attribute name="bureauEnseignant" type="xs:string"/>
+    <xs:attribute name="telEnseignant" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name ="UF">
+    <xs:attribute name="idUF" type="xs:ID"/>
+		<xs:attribute name="codeApogeeUF" type="xs:string"/>
+    <xs:attribute name="semestreUF" type="xs:string"/>
+    <xs:attribute name="heterogeneUF" type="xs:boolean"/>
+    <xs:attribute name="continueUF" type="xs:boolean"/>
+    <xs:attribute name="evalCompetenceUF" type="xs:bool"/>
+    <xs:attribute name="totalPresentielUF" type="xs:decimal"/>
+    <xs:attribute name="coefUF" type="xs:decimal"/>
+    <xs:attribute name="ectsUF" type="xs:integer"/>
+  </xs:complexType>
+
 </xs:schema>
