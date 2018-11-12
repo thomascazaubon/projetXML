@@ -32,7 +32,7 @@
 
   <xs:complexType name ="Departement">
     <xs:attribute name="idDepartement" type="xs:ID"/>
-    <xs:attribute name="nomDepartement" type="xs:string"/>
+    <xs:attribute name="nomDepartement" type="xs:string"/> 
     <xs:anttribute name="acronymeDepartement" type="xs:string"/>
     <xs:attribute name="dateCreationDepartement" type="xs:date"/>
   </xs:complexType>
