@@ -37,16 +37,6 @@
     <xs:attribute name="dateCreationDepartement" type="xs:date"/>
   </xs:complexType>
 
-  <xs:complexType name ="Enseignant">
-    <xs:attribute name="idEnseignant" type="xs:ID"/>
-		<xs:attribute name="nomEnseignant" type="xs:string"/>
-    <xs:attribute name="prenomEnseignant" type="xs:string"/>
-    <xs:attribute name="emailEnseignant" type="xs:string"/>
-    <xs:attribute name="gradeEnseignant" type="xs:string"/>
-    <xs:attribute name="bureauEnseignant" type="xs:string"/>
-    <xs:attribute name="telEnseignant" type="xs:string"/>
-  </xs:complexType>
-
   <xs:complexType name ="UF">
     <xs:attribute name="idUF" type="xs:ID"/>
 		<xs:attribute name="codeApogeeUF" type="xs:string"/>
