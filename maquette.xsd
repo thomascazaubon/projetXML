@@ -49,4 +49,19 @@
     <xs:attribute name="ectsUF" type="xs:integer"/>
   </xs:complexType>
 
+  <xs:complexType name ="Orientation">
+    <xs:attribute name="idOrientation" type="xs:ID"/>
+    <xs:attribute name="nomOrientation" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name ="SousOrientation">
+    <xs:attribute name="idSousOrientation" type="xs:ID"/>
+    <xs:attribute name="nomSousOrientation" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name ="GrandDomaine">
+    <xs:attribute name="idGrandDomaine" type="xs:ID"/>
+    <xs:attribute name="nomGrandDomaine" type="xs:string"/>
+  </xs:complexType>
+
 </xs:schema>
