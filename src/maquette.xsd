@@ -18,7 +18,6 @@
   <xs:complexType name ="Competence">
     <xs:attribute name="idCompetence" type="xs:ID"/>
 	  <xs:attribute name="nomCompetence" type="xs:string"/>
-
   </xs:complexType>
 
   <xs:complexType name ="Enseignant">
