@@ -1,26 +1,44 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <xs:complexType name ="Epreuve">
+  <xs:complexType name="maquette">
+    <xs:all>
+      <xs:element name="Departement" ref="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="UF" ref="UFType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Formation" ref="FormationType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="GrandDomaine" ref="GrandDomaineType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name ="EpreuveType">
     <xs:attribute name="idEpreuve" type="xs:ID"/>
 		<xs:attribute name="nomEpreuve" type="xs:string"/>
 		<xs:attribute name="coefEpreuve" type="xs:decimal"/>
 		<xs:attribute name="natureEpreuve" type="xs:string"/>
+    <xs:attribute name="idUERef" type="xs:ID"/>
   </xs:complexType>
 
-  <xs:complexType name ="UE">
+  <xs:complexType name ="UEType">
+    <xs:sequence>
+      <xs:element name="Epreuve" ref="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:sequence>
+      <xs:element name="Competence" ref="CompetenceType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
     <xs:attribute name="idUE" type="xs:ID"/>
   	<xs:attribute name="intituleUE" type="xs:string"/>
   	<xs:attribute name="heuresCMUE" type="xs:decimal"/>
     <xs:attribute name="heuresTDUE" type="xs:decimal"/>
     <xs:attribute name="heuresTPUE" type="xs:decimal"/>
+    <xs:attribute name="idEnseignantRef" type="xs:ID"/>
   </xs:complexType>
 
-  <xs:complexType name ="Competence">
+  <xs:complexType name ="CompetenceType">
     <xs:attribute name="idCompetence" type="xs:ID"/>
 	  <xs:attribute name="nomCompetence" type="xs:string"/>
+    <xs:attribute name="idUERef" type="xs:ID"/>
   </xs:complexType>
 
-  <xs:complexType name ="Enseignant">
+  <xs:complexType name ="EnseignantType">
     <xs:attribute name="idEnseignant" type="xs:ID"/>
 	  <xs:attribute name="nomEnseignant" type="xs:string"/>
     <xs:attribute name="prenomEnseignant" type="xs:string"/>
@@ -28,16 +46,24 @@
     <xs:attribute name="gradeEnseignant" type="xs:string"/>
     <xs:attribute name="bureauEnseignant" type="xs:string"/>
     <xs:attribute name="telEnseignant" type="xs:string"/>
+    <xs:attribute name="idDepartementRef" type="xs:ID"/>
   </xs:complexType>
 
-  <xs:complexType name ="Departement">
+  <xs:complexType name ="DepartementType">
+    <xs:sequence>
+      <xs:element name = "Enseignant" ref="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
     <xs:attribute name="idDepartement" type="xs:ID"/>
     <xs:attribute name="nomDepartement" type="xs:string"/>
     <xs:anttribute name="acronymeDepartement" type="xs:string"/>
     <xs:attribute name="dateCreationDepartement" type="xs:date"/>
+    <xs:attribute name="idChefDeDepartement" type="xs:ID"/>
   </xs:complexType>
 
-  <xs:complexType name ="UF">
+  <xs:complexType name ="UFType">
+    <xs:sequence>
+      <xs:element name = "UE" ref="UEType"/>
+    </xs:sequence>
 	  <xs:attribute name="codeApogeeUF" type="xs:id"/>
     <xs:attribute name="semestreUF" type="xs:string"/>
     <xs:attribute name="heterogeneUF" type="xs:boolean"/>
@@ -46,21 +72,33 @@
     <xs:attribute name="totalPresentielUF" type="xs:decimal"/>
     <xs:attribute name="coefUF" type="xs:decimal"/>
     <xs:attribute name="ectsUF" type="xs:integer"/>
+    <xs:attribute name="idEnseignantRef" type="xs:ID"/>
+    <xs:attribute name="idGrandDomaineRef" type="xs:ID"/>
+    <xs:attribute name="idSemestreRef" type="xs:ID"/>
   </xs:complexType>
 
-  <xs:complexType name ="Orientation">
-    <xs:attribute name="idOrientation" type="xs:ID"/>
-    <xs:attribute name="nomOrientation" type="xs:string"/>
+  <xs:complexType name ="FormationType">
+    <xs:sequence>
+      <xs:element name ="SousFormation" ref="SousFormationType">
+    </xs:sequence>
+    <xs:attribute name="idFormation" type="xs:ID"/>
+    <xs:attribute name="nomFormation" type="xs:string"/>
+    <xs:attribute name="idDepartementRef" type="xs:ID"/>
   </xs:complexType>
 
-  <xs:complexType name ="SousOrientation">
-    <xs:attribute name="idSousOrientation" type="xs:ID"/>
-    <xs:attribute name="nomSousOrientation" type="xs:string"/>
+  <xs:complexType name ="SousFormationType">
+    <xs:attribute name="idSousFormation" type="xs:ID"/>
+    <xs:attribute name="nomSousFormation" type="xs:string"/>
   </xs:complexType>
 
-  <xs:complexType name ="GrandDomaine">
+  <xs:complexType name ="GrandDomaineType">
     <xs:attribute name="idGrandDomaine" type="xs:ID"/>
     <xs:attribute name="nomGrandDomaine" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name ="semestreType">
+    <xs:attribute name="idSemestre" type="xs:ID"/>
+    <xs:attribute name="nomSemestre" type="xs:string"/>
   </xs:complexType>
 
   <!-- ****************************** -->
@@ -97,12 +135,12 @@
     <field xpath="expression_XPath" ></field>
   </xs:key>
 
-  <xs:key name="idOrientationKey">
+  <xs:key name="idFormationKey">
     <selector xpath="expression_XPath" ></selector>
     <field xpath="expression_XPath" ></field>
   </xs:key>
 
-  <xs:key name="idSousOrientationKey">
+  <xs:key name="idSousFormationKey">
     <selector xpath="expression_XPath" ></selector>
     <field xpath="expression_XPath" ></field>
   </xs:key>
@@ -146,12 +184,12 @@
     <field xpath="expression_XPath" ></field>
   </xs:keyref>
 
-  <xs:keyref name="idOrientationKeyRef" refer="idOrientationKey">
+  <xs:keyref name="idFormationKeyRef" refer="idFormationKey">
     <selector xpath="expression_XPath" ></selector>
     <field xpath="expression_XPath" ></field>
   </xs:keyref>
 
-  <xs:keyref name="idSousOrientationKeyRef" refer="idSousOrientationKey">
+  <xs:keyref name="idSousFormationKeyRef" refer="idSousFormationKey">
     <selector xpath="expression_XPath" ></selector>
     <field xpath="expression_XPath" ></field>
   </xs:keyref>
