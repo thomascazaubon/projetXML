@@ -26,14 +26,9 @@
 
   <xs:complexType name="DonneesType">
     <xs:all>
-      <xs:element name="Epreuves" type="EpreuvesType" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="UEs" type="UEsType" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="Competences" type="CompetencesType" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="Enseignants" type="EnseignantsType" minOccurs="1" maxOccurs="1"/>
       <xs:element name="Departements" type="DepartementsType" minOccurs="1" maxOccurs="1"/>
       <xs:element name="UFs" type="UFsType" minOccurs="1" maxOccurs="1"/>
       <xs:element name="Formations" type="FormationsType" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="SousFormations" type="SousFormationsType" minOccurs="0" maxOccurs="1"/>
       <xs:element name="GrandsDomaines" type="GrandsDomainesType" minOccurs="1" maxOccurs="1"/>
       <xs:element name="Semestres" type="SemestresType" minOccurs="1" maxOccurs="1"/>
     </xs:all>
@@ -101,18 +96,14 @@
 
   <xs:complexType name="MaquetteType">
     <xs:all>
-      <xs:element name="Epreuve" type="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="UE" type="UEType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Competence" type="CompetenceType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Enseignant" type="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Departement" type="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="UF" type="UFType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Formation" type="FormationType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="SousFormation" type="SousFormationType" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="GrandDomaine" type="GrandDomaineType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Semestre" type="SemestreType" minOccurs="1" maxOccurs="unbounded"/>
     </xs:all>
-    <xs:attribute name="nomMaquette" type="xs:string">
+    <xs:attribute name="nomMaquette" type="xs:string"/>
   </xs:complexType>
 
   <xs:complexType name ="EpreuveType">
@@ -121,6 +112,10 @@
   	<xs:attribute name="codeApogeeEpreuve" type="xs:string"/>
 		<xs:attribute name="coefEpreuve" type="xs:decimal"/>
 		<xs:attribute name="natureEpreuve" type="xs:string"/>
+    <xs:key name="idEpreuveKey">
+      <selector xpath="." />
+      <field xpath="@idEpreuve" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="UEType">
@@ -131,12 +126,25 @@
   	<xs:attribute name="heuresCMUE" type="xs:decimal"/>
     <xs:attribute name="heuresTDUE" type="xs:decimal"/>
     <xs:attribute name="heuresTPUE" type="xs:decimal"/>
-    <xs:attribute name="idEnseignantRef" type="xs:ID"/>
+    <xs:element name="enseignantResponsable" type="xs:ID"/>
+      <xs:keyref name="idEnseignantKeyRef" refer="idEnseignantKey">
+        <selector xpath="/GestionMaquettes/Donnees/Departements/Departement/Enseignants/Enseignant" />
+        <field xpath="@idEnseignant" />
+      </xs:keyref>
+    </xs:element>
+    <xs:key name="idUEKey">
+      <selector xpath="." />
+      <field xpath="@idUE" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="CompetenceType">
     <xs:attribute name="idCompetence" type="xs:ID"/>
 	  <xs:attribute name="nomCompetence" type="xs:string"/>
+    <xs:key name="competenceIdKey">
+      <selector xpath="." />
+      <field xpath="@idCompetence" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="EnseignantType">
@@ -147,29 +155,62 @@
     <xs:attribute name="gradeEnseignant" type="xs:string"/>
     <xs:attribute name="bureauEnseignant" type="xs:string"/>
     <xs:attribute name="telEnseignant" type="xs:string"/>
-    <xs:attribute name="idDepartementRef" type="xs:ID"/>
+    <xs:key name="idEnseignantKey">
+      <selector xpath="." />
+      <field xpath="@idEnseignant" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="DepartementType">
+    <xs:element name="Enseignants" type="EnseignantsType" />
     <xs:attribute name="idDepartement" type="xs:ID"/>
     <xs:attribute name="nomDepartement" type="xs:string"/>
     <xs:anttribute name="acronymeDepartement" type="xs:string"/>
     <xs:attribute name="dateCreationDepartement" type="xs:date"/>
-    <xs:attribute name="idChefDeDepartement" type="xs:ID"/>
+    <xs:element name="chefDeDepartement" type="xs:ID">
+      <xs:keyref name="idEnseignantKeyRef" refer="idEnseignantKey">
+        <selector xpath="Enseignants/Enseignant" />
+        <field xpath="@idEnseignant" />
+      </xs:keyref>
+    </xs:element>
+    <xs:key name="idDepartementKey">
+      <selector xpath="." />
+      <field xpath="@idDepartement" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="UFType">
     <xs:element name="UEs" type="UEsType"/>
 	  <xs:attribute name="codeApogeeUF" type="xs:id"/>
+    <xs:attribute name="nomUF" type="xs:string"/>
     <xs:attribute name="heterogeneUF" type="xs:boolean"/>
     <xs:attribute name="continueUF" type="xs:boolean"/>
     <xs:attribute name="evalCompetenceUF" type="xs:bool"/>
     <xs:attribute name="totalPresentielUF" type="xs:decimal"/>
     <xs:attribute name="coefUF" type="xs:decimal"/>
     <xs:attribute name="ectsUF" type="xs:integer"/>
-    <xs:attribute name="idEnseignantRef" type="xs:ID"/>
-    <xs:attribute name="idGrandDomaineRef" type="xs:ID"/>
-    <xs:attribute name="idSemestreRef" type="xs:ID"/>
+    <xs:element name="enseignantResponsable" type="xs:ID">
+      <xs:keyref name="idEnseignantKeyRef" refer="idEnseignantKey">
+        <selector xpath="/GestionMaquettes/Donnees/Departements/Departement/Enseignants/Enseignant" />
+        <field xpath="@idEnseignant"/>
+      </xs:keyref>
+    </xs:element>
+    <xs:element name="idGrandDomaineRef" type="xs:ID">
+      <xs:keyref name="idGrandDomaineKeyRef" refer="idGrandDomaineKey">
+        <selector xpath="/GestionMaquettes/Donnees/GrandsDomaines/GrandDomaine" />
+        <field xpath="@idGrandDomaine"/>
+      </xs:keyref>
+    </xs:element>
+    <xs:element name="idSemestreRef" type="xs:ID"/>
+      <xs:keyref name="idSemestreKeyRef" refer="idSemestreKey">
+        <selector xpath="/GestionMaquettes/Donnees/Semestres/Semestre" />
+        <field xpath="@idSemestre"/>
+      </xs:keyref>
+    </xs:element>
+    <xs:key name="idUFKey">
+      <selector xpath="." />
+      <field xpath="@idUF" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="FormationType">
@@ -177,131 +218,99 @@
     <xs:attribute name="idFormation" type="xs:ID"/>
     <xs:attribute name="nomFormation" type="xs:string"/>
     <xs:attribute name="acronymeFormation" type="xs:string"/>
-    <xs:attribute name="idDepartementRef" type="xs:ID"/>
+    <xs:element name="departement" type="xs:ID"/>
+      <xs:keyref name="idDepartementKeyRef" refer="idDepartementKey">
+        <selector xpath="/GestionMaquettes/Donnees/Departements/Departement" />
+        <field xpath="@idDepartement" />
+      </xs:keyref>
+    </xs:element>
+    <xs:key name="idFormationKey">
+      <selector xpath="." />
+      <field xpath="@idFormation" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="SousFormationType">
     <xs:attribute name="idSousFormation" type="xs:ID"/>
     <xs:attribute name="nomSousFormation" type="xs:string"/>
     <xs:attribute name="acronymeSousFormation" type="xs:string"/>
+    <xs:key name="idSousFormationKey">
+      <selector xpath="." />
+      <field xpath="@idSousFormation" />
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="GrandDomaineType">
     <xs:attribute name="idGrandDomaine" type="xs:ID"/>
     <xs:attribute name="nomGrandDomaine" type="xs:string"/>
+    <xs:key name="idGrandDomaineKey">
+      <selector xpath="." />
+      <field xpath="@idGrandDomaine"/>
+    </xs:key>
   </xs:complexType>
 
   <xs:complexType name ="SemestreType">
     <xs:attribute name="idSemestre" type="xs:ID"/>
     <xs:attribute name="nomSemestre" type="xs:string"/>
+    <xs:key name="idSemestreKey">
+      <selector xpath="." />
+      <field xpath="@idSemestre" />
+    </xs:key>
   </xs:complexType>
-
-  <!-- ****************************** -->
-  <!-- DEFINITIONS DES CLES PRIMAIRES -->
-  <!-- ****************************** -->
-
-  <xs:key name="competenceIdKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idUEKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idUFKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idEpreuveKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idEnseignantKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idDepartementKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idFormationKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idSousFormationKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idGrandDomaineKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
-
-  <xs:key name="idSemestreKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
-  </xs:key>
 
   <!-- ******************************* -->
   <!-- DEFINITIONS DES CLES ETRANGERES -->
   <!-- ******************************* -->
 
+  <!--
   <xs:keyref name="competenceIdKeyRef" refer="competenceIdKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idUEKeyRef" refer="idUEKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idUFKeyRef" refer="idUFKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idEpreuveKeyRef" refer="idEpreuveKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idEnseignantKeyRef" refer="idEnseignantKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idDepartementKeyRef" refer="idDepartementKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idFormationKeyRef" refer="idFormationKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idSousFormationKeyRef" refer="idSousFormationKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idGrandDomaineKeyRef" refer="idGrandDomaineKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
 
   <xs:keyref name="idSemestreKeyRef" refer="idSemestreKey">
-    <selector xpath="expression_XPath" ></selector>
-    <field xpath="expression_XPath" ></field>
+    <selector xpath="expression_XPath" />
+    <field xpath="expression_XPath" />
   </xs:keyref>
-
+  -->
 </xs:schema>
