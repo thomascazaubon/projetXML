@@ -5,25 +5,112 @@
   <!-- *** INSTANCIATION DES TYPES ** -->
   <!-- ****************************** -->
 
-  <xs:element name="Maquette" ref="MaquetteType" minOccurs="1" maxOccurs="unbounded"/>
-
+  <xs:element name="GestionMaquettes" type="GestionMaquettesType" micOccurs="1" maxOccurs="1"/>
 
   <!-- ****************************** -->
   <!-- **** DEFINITION DES TYPES **** -->
   <!-- ****************************** -->
 
+  <xs:complexType name="GestionMaquettes">
+    <xs:sequence>
+      <xs:element name="Maquettes" type="MaquettesType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Donnees" type="DonneesType" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MaquettesType">
+    <xs:sequence>
+      <xs:element name="Maquette" type="MaquetteType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DonneesType">
+    <xs:all>
+      <xs:element name="Epreuves" type="EpreuvesType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="UEs" type="UEsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Competences" type="CompetencesType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Enseignants" type="EnseignantsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Departements" type="DepartementsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="UFs" type="UFsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Formations" type="FormationsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SousFormations" type="SousFormationsType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="GrandsDomaines" type="GrandsDomainesType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Semestres" type="SemestresType" minOccurs="1" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="EpreuvesType">
+    <xs:sequence>
+      <xs:element name="Epreuve" type="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UEsType">
+    <xs:sequence>
+      <xs:element name="UE" type="UEType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CompetencesType">
+    <xs:sequence>
+      <xs:element name="Competence" type="CompetenceType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EnseignantsType">
+    <xs:sequence>
+      <xs:element name="Enseignant" type="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DepartementsType">
+    <xs:sequence>
+      <xs:element name="Departement" type="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UFsType">
+    <xs:sequence>
+      <xs:element name="UF" type="UFType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FormationsType">
+    <xs:sequence>
+      <xs:element name="Formation" type="FormationType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SousFormationsType">
+    <xs:sequence>
+      <xs:element name="SousFormation" type="SousFormationType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GrandsDomainesType">
+    <xs:sequence>
+      <xs:element name="GrandDomaine" type="GrandDomaineType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SemestresType">
+    <xs:sequence>
+      <xs:element name="Semestre" type="SemestreType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="MaquetteType">
     <xs:all>
-      <xs:element name="Epreuve" ref="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="UE" ref="UEType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Competence" ref="CompetenceType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Enseignant" ref="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Departement" ref="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="UF" ref="UFType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Formation" ref="FormationType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="SousFormation" ref="SousFormationType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="GrandDomaine" ref="GrandDomaineType" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="Semestre" ref="SemestreType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Epreuve" type="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="UE" type="UEType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Competence" type="CompetenceType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Enseignant" type="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Departement" type="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="UF" type="UFType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Formation" type="FormationType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="SousFormation" type="SousFormationType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="GrandDomaine" type="GrandDomaineType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Semestre" type="SemestreType" minOccurs="1" maxOccurs="unbounded"/>
     </xs:all>
     <xs:attribute name="nomMaquette" type="xs:string">
   </xs:complexType>
@@ -31,14 +118,16 @@
   <xs:complexType name ="EpreuveType">
     <xs:attribute name="idEpreuve" type="xs:ID"/>
 		<xs:attribute name="nomEpreuve" type="xs:string"/>
+  	<xs:attribute name="codeApogeeEpreuve" type="xs:string"/>
 		<xs:attribute name="coefEpreuve" type="xs:decimal"/>
 		<xs:attribute name="natureEpreuve" type="xs:string"/>
-    <xs:attribute name="idUERef" type="xs:ID"/>
   </xs:complexType>
 
   <xs:complexType name ="UEType">
+    <xs:element name="Epreuves" type="EpreuvesType" />
+    <xs:element name="Competences" type="CompetencesType" />
     <xs:attribute name="idUE" type="xs:ID"/>
-  	<xs:attribute name="intituleUE" type="xs:string"/>
+    <xs:attribute name="intituleUE" type="xs:string"/>
   	<xs:attribute name="heuresCMUE" type="xs:decimal"/>
     <xs:attribute name="heuresTDUE" type="xs:decimal"/>
     <xs:attribute name="heuresTPUE" type="xs:decimal"/>
@@ -48,7 +137,6 @@
   <xs:complexType name ="CompetenceType">
     <xs:attribute name="idCompetence" type="xs:ID"/>
 	  <xs:attribute name="nomCompetence" type="xs:string"/>
-    <xs:attribute name="idUERef" type="xs:ID"/>
   </xs:complexType>
 
   <xs:complexType name ="EnseignantType">
@@ -71,8 +159,8 @@
   </xs:complexType>
 
   <xs:complexType name ="UFType">
+    <xs:element name="UEs" type="UEsType"/>
 	  <xs:attribute name="codeApogeeUF" type="xs:id"/>
-    <xs:attribute name="semestreUF" type="xs:string"/>
     <xs:attribute name="heterogeneUF" type="xs:boolean"/>
     <xs:attribute name="continueUF" type="xs:boolean"/>
     <xs:attribute name="evalCompetenceUF" type="xs:bool"/>
@@ -85,14 +173,17 @@
   </xs:complexType>
 
   <xs:complexType name ="FormationType">
+    <xs:element name="SousFormations" type="SousFormationsType" />
     <xs:attribute name="idFormation" type="xs:ID"/>
     <xs:attribute name="nomFormation" type="xs:string"/>
+    <xs:attribute name="acronymeFormation" type="xs:string"/>
     <xs:attribute name="idDepartementRef" type="xs:ID"/>
   </xs:complexType>
 
   <xs:complexType name ="SousFormationType">
     <xs:attribute name="idSousFormation" type="xs:ID"/>
     <xs:attribute name="nomSousFormation" type="xs:string"/>
+    <xs:attribute name="acronymeSousFormation" type="xs:string"/>
   </xs:complexType>
 
   <xs:complexType name ="GrandDomaineType">
