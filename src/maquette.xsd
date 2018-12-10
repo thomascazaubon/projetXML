@@ -5,7 +5,7 @@
   <!-- *** INSTANCIATION DES TYPES ** -->
   <!-- ****************************** -->
 
-  <xs:element name="Maquette" ref="MaquetteType" minOccurs="1" maxOccurs="1"/>
+  <xs:element name="Maquette" ref="MaquetteType" minOccurs="1" maxOccurs="unbounded"/>
 
 
   <!-- ****************************** -->
