@@ -5,7 +5,14 @@
   <!-- *** INSTANCIATION DES TYPES ** -->
   <!-- ****************************** -->
 
-  <xs:complexType name="maquette">
+  <xs:element name="Maquette" ref="MaquetteType" minOccurs="1" maxOccurs="1"/>
+
+
+  <!-- ****************************** -->
+  <!-- **** DEFINITION DES TYPES **** -->
+  <!-- ****************************** -->
+
+  <xs:complexType name="MaquetteType">
     <xs:all>
       <xs:element name="Epreuve" ref="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="UE" ref="UEType" minOccurs="1" maxOccurs="unbounded"/>
@@ -18,11 +25,8 @@
       <xs:element name="GrandDomaine" ref="GrandDomaineType" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="Semestre" ref="SemestreType" minOccurs="0" maxOccurs="unbounded"/>
     </xs:all>
+    <xs:attribute name="nomMaquette" type="xs:string">
   </xs:complexType>
-
-  <!-- ****************************** -->
-  <!-- **** DEFINITION DES TYPES **** -->
-  <!-- ****************************** -->
 
   <xs:complexType name ="EpreuveType">
     <xs:attribute name="idEpreuve" type="xs:ID"/>
