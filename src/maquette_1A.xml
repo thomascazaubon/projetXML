@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+<GestionMaquettes>
+
+	<maquettes>
+		<maquette nomMaquette="1A STPI">
+			<Departement>1</Departement>
+			<UF>1</UF>
+			<UF>2</UF>
+			<UF>3</UF>
+			<Formation>1</Formation>
+		</maquette>
+
+	</maquettes>
+
+
+	<Departements>
+		<Departement idDep="1" nomDepartement="Sciences et Techniques pour l'Ingénieur" acronymeDepartement="STPI" dateCreationDepartement="1963" idChefDeDepartement="1">
+		</Departement>
+	</Departements>
+	
+	<Enseignants>
+
+		<Enseignant idEnseignant="1" nomEnseignant="PIC" prenomEnseignant="Jean-Stéphane" emailEnseignant="pic@insa-toulouse.fr" gradeEnseignant="Professeur" bureauEnseignant="STPI02" telEnseignant="0598751475" idDepartementRef="1">
+		</Enseignant>
+
+		<Enseignant idEnseignant="2" nomEnseignant="CARREY" prenomEnseignant="Julian" emailEnseignant="carrey@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GP062" telEnseignant="0598221475" idDepartementRef="1">
+		</Enseignant>
+
+		<Enseignant idEnseignant="3" nomEnseignant="LE BOTLAN" prenomEnseignant="Didier" emailEnseignant="lebotlan@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GEI045" telEnseignant="0598521475" idDepartementRef="1">
+		</Enseignant>
+
+		<Enseignant idEnseignant="4" nomEnseignant="NOBLE" prenomEnseignant="Pascal" emailEnseignant="noble@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GMM128" telEnseignant="0598521476" idDepartementRef="1">
+		</Enseignant>
+
+		<Enseignant idEnseignant="5" nomEnseignant="LAFFITTE" prenomEnseignant="Jean-Claude" emailEnseignant="laffitte@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GC685" telEnseignant="0598581476" idDepartementRef="1">
+		</Enseignant>
+
+		<Enseignant idEnseignant="6" nomEnseignant="LECLERC" prenomEnseignant="Lucie" emailEnseignant="leclerc@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="CSH125" telEnseignant="0595347518" idDepartementRef="1">
+		</Enseignant>
+
+	</Enseignants>
+	
+	<UFs>
+		<UF codeApogeeUF="I1AHPH21" nomUF="Physique" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="70" coefUF="1" ectsUF="5" idEnseignantRef="2" idGrandDomaineRef="1" idSemestreRef="1">
+
+					<UE idUE="1" intituleUE="APP Optique" heuresCMUE="40.75" heuresTDUE="" heuresTPUE="" idEnseignantRef="1">
+						<Epreuve idEpreuve="1" nomEpreuve="C1_CC1" coefEpreuve="0.15" natureEpreuve="écrit">
+						</Epreuve>
+						
+					</UE>
+
+					<UE idUE="2" intituleUE="App de mécanique" heuresCMUE="29.75" heuresTDUE="" heuresTPUE="" idEnseignantRef="4">
+						<Epreuve idEpreuve="2" nomEpreuve="E2_Meca" coefEpreuve="0.25" natureEpreuve="écrit">
+						</Epreuve>
+					</UE>
+
+		</UF>
+
+
+		<UF codeApogeeUF="I1ANIF11" nomUF="Maths-Algo" heterogeneUF="true" continueUF="false" evalCompetenceUF="false" totalPresentielUF="42" coefUF="1" ectsUF="3" idEnseignantRef="3" idGrandDomaineRef="1" idSemestreRef="1">
+
+					<UE idUE="3" intituleUE="Algo" heuresCMUE="28" heuresTDUE="" heuresTPUE="" idEnseignantRef="3">
+					<Competence idCompetence="3" nomCompetence="java">
+					</Competence>
+					<Competence idCompetence="4" nomCompetence="XML/XSD">
+					</Competence>
+					<Epreuve idEpreuve="3" nomEpreuve="M1_Moodle" coefEpreuve="0.18" natureEpreuve="qcm">
+					</Epreuve>
+		</UE>
+
+		</UF>
+
+		<UF codeApogeeUF="I1ANLA11" nomUF="CSH" heterogeneUF="true" continueUF="true" evalCompetenceUF="false" totalPresentielUF="64" coefUF="1" ectsUF="3" idEnseignantRef="6" idGrandDomaineRef="2" idSemestreRef="1">
+
+				<UE idUE="4" intituleUE="LV1" heuresCMUE="30" heuresTDUE="" heuresTPUE="" idEnseignantRef="6">
+					<Epreuve idEpreuve="4" nomEpreuve="CC1" coefEpreuve="0.6" natureEpreuve="écrit">
+					</Epreuve>
+				</UE>
+
+				<UE idUE="5" intituleUE="LV2" heuresCMUE="15" heuresTDUE="" heuresTPUE="" idEnseignantRef="6">
+					<Epreuve idEpreuve="5" nomEpreuve="CC1" coefEpreuve="0.4" natureEpreuve="écrit">
+					</Epreuve>
+				</UE>
+
+		</UF>
+	</UFs>
+
+
+
+
+
+	<GrandsDomaines>
+		<GrandDomaine idGrandDomaine="1" nomGrandDomaine="Sciences Appliquées">
+		</GrandDomaine>
+		<GrandDomaine idGrandDomaine="2" nomGrandDomaine="Sciences humaines">
+		</GrandDomaine>
+	</GrandsDomaines>
+
+
+	<Formations>
+		<Formation idFormation="1" nomFormation="1ère année" idDepartementRef="1">
+		</Formation>
+	</Formations>
+
+	<Semestres>
+		<Semestre idSemestre="1" nomSemestre="Semestre 1">
+		</Semestre>
+	</Semestres>
+
+</GestionMaquettes>
