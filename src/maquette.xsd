@@ -1,13 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ****************************** -->
+  <!-- *** INSTANCIATION DES TYPES ** -->
+  <!-- ****************************** -->
 
   <xs:complexType name="maquette">
     <xs:all>
+      <xs:element name="Epreuve" ref="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="UE" ref="UEType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Competence" ref="CompetenceType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Enseignant" ref="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Departement" ref="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="UF" ref="UFType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Formation" ref="FormationType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="SousFormation" ref="SousFormationType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="GrandDomaine" ref="GrandDomaineType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Semestre" ref="SemestreType" minOccurs="0" maxOccurs="unbounded"/>
     </xs:all>
   </xs:complexType>
+
+  <!-- ****************************** -->
+  <!-- **** DEFINITION DES TYPES **** -->
+  <!-- ****************************** -->
 
   <xs:complexType name ="EpreuveType">
     <xs:attribute name="idEpreuve" type="xs:ID"/>
@@ -18,12 +33,6 @@
   </xs:complexType>
 
   <xs:complexType name ="UEType">
-    <xs:sequence>
-      <xs:element name="Epreuve" ref="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-    <xs:sequence>
-      <xs:element name="Competence" ref="CompetenceType" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
     <xs:attribute name="idUE" type="xs:ID"/>
   	<xs:attribute name="intituleUE" type="xs:string"/>
   	<xs:attribute name="heuresCMUE" type="xs:decimal"/>
@@ -50,9 +59,6 @@
   </xs:complexType>
 
   <xs:complexType name ="DepartementType">
-    <xs:sequence>
-      <xs:element name = "Enseignant" ref="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
     <xs:attribute name="idDepartement" type="xs:ID"/>
     <xs:attribute name="nomDepartement" type="xs:string"/>
     <xs:anttribute name="acronymeDepartement" type="xs:string"/>
@@ -61,9 +67,6 @@
   </xs:complexType>
 
   <xs:complexType name ="UFType">
-    <xs:sequence>
-      <xs:element name = "UE" ref="UEType"/>
-    </xs:sequence>
 	  <xs:attribute name="codeApogeeUF" type="xs:id"/>
     <xs:attribute name="semestreUF" type="xs:string"/>
     <xs:attribute name="heterogeneUF" type="xs:boolean"/>
@@ -78,9 +81,6 @@
   </xs:complexType>
 
   <xs:complexType name ="FormationType">
-    <xs:sequence>
-      <xs:element name ="SousFormation" ref="SousFormationType">
-    </xs:sequence>
     <xs:attribute name="idFormation" type="xs:ID"/>
     <xs:attribute name="nomFormation" type="xs:string"/>
     <xs:attribute name="idDepartementRef" type="xs:ID"/>
@@ -96,7 +96,7 @@
     <xs:attribute name="nomGrandDomaine" type="xs:string"/>
   </xs:complexType>
 
-  <xs:complexType name ="semestreType">
+  <xs:complexType name ="SemestreType">
     <xs:attribute name="idSemestre" type="xs:ID"/>
     <xs:attribute name="nomSemestre" type="xs:string"/>
   </xs:complexType>
@@ -150,6 +150,11 @@
     <field xpath="expression_XPath" ></field>
   </xs:key>
 
+  <xs:key name="idSemestreKey">
+    <selector xpath="expression_XPath" ></selector>
+    <field xpath="expression_XPath" ></field>
+  </xs:key>
+
   <!-- ******************************* -->
   <!-- DEFINITIONS DES CLES ETRANGERES -->
   <!-- ******************************* -->
@@ -195,6 +200,11 @@
   </xs:keyref>
 
   <xs:keyref name="idGrandDomaineKeyRef" refer="idGrandDomaineKey">
+    <selector xpath="expression_XPath" ></selector>
+    <field xpath="expression_XPath" ></field>
+  </xs:keyref>
+
+  <xs:keyref name="idSemestreKeyRef" refer="idSemestreKey">
     <selector xpath="expression_XPath" ></selector>
     <field xpath="expression_XPath" ></field>
   </xs:keyref>
