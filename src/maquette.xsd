@@ -129,7 +129,7 @@
   	<xs:attribute name="heuresCMUE" type="xs:decimal"/>
     <xs:attribute name="heuresTDUE" type="xs:decimal"/>
     <xs:attribute name="heuresTPUE" type="xs:decimal"/>
-    <xs:element name="enseignantResponsable" type="xs:ID"/>
+    <xs:element name="enseignantResponsable" type="xs:ID">
       <xs:keyref name="idEnseignantKeyRef" refer="idEnseignantKey">
         <selector xpath="/GestionMaquettes/Donnees/Departements/Departement/Enseignants/Enseignant" />
         <field xpath="@idEnseignant" />
@@ -204,7 +204,7 @@
         <field xpath="@idGrandDomaine"/>
       </xs:keyref>
     </xs:element>
-    <xs:element name="idSemestreRef" type="xs:ID"/>
+    <xs:element name="idSemestreRef" type="xs:ID">
       <xs:keyref name="idSemestreKeyRef" refer="idSemestreKey">
         <selector xpath="/GestionMaquettes/Donnees/Semestres/Semestre" />
         <field xpath="@idSemestre"/>
@@ -221,7 +221,7 @@
     <xs:attribute name="idFormation" type="xs:ID"/>
     <xs:attribute name="nomFormation" type="xs:string"/>
     <xs:attribute name="acronymeFormation" type="xs:string"/>
-    <xs:element name="departement" type="xs:ID"/>
+    <xs:element name="departement" type="xs:ID">
       <xs:keyref name="idDepartementKeyRef" refer="idDepartementKey">
         <selector xpath="/GestionMaquettes/Donnees/Departements/Departement" />
         <field xpath="@idDepartement" />
