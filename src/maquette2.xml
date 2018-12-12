@@ -55,87 +55,90 @@
 
 		<Enseignant idEnseignant="31" nomEnseignant="DUPONT" prenomEnseignant="Thierry" emailEnseignant="dupont@insa-toulouse.fr" gradeEnseignant="Ingenieur" bureauEnseignant="NULL" telEnseignant="0542947256" idDepartementRef="NULL">
 		</Enseignant>
+
+		<Enseignant idEnseignant="32" nomEnseignant="GUERMOUCHE" prenomEnseignant="Nawal" emailEnseignant="guermouche@insa-toulouse.fr" gradeEnseignant="Enseingnant-Chercheur" bureauEnseignant="GEI129" telEnseignant="0542934856" idDepartementRef="22">
+		</Enseignant>
+
 	</Enseignants>
 
 	<UFs>
-		<UF codeApogeeUF="I3MIIF21" nomUF="Programmation système et réseaux" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="59" coefUF="1" ectsUF="5" idEnseignantRef="22" idGrandDomaineRef="21" idSemestreRef="21">
+		<UF codeApogeeUF="I3MIIF21" nomUF="Programmation système et réseaux" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="59" coefUF="1" ectsUF="5" idEnseignantRef="21" idGrandDomaineRef="21" idSemestreRef="21">
 
-					<UE idUE="21" intituleUE="Programmation système et multithreading" heuresCMUE="12" heuresTDUE="6" heuresTPUE="12" idEnseignantRef="21">
-						<Epreuve idEpreuve="21" nomEpreuve="C1_CC1" coefEpreuve="0.15" natureEpreuve="écrit">
-						</Epreuve>
-
-					</UE>
-
-					<UE idUE="22" intituleUE="Applications internet et programmation socket" heuresCMUE="7.5" heuresTDUE="0" heuresTPUE="6" idEnseignantRef="24">
-						<Epreuve idEpreuve="22" nomEpreuve="compte_rendu" coefEpreuve="0.25" natureEpreuve="écrit">
+					<UE idUE="211" intituleUE="Programmation système et multithreading" heuresCMUE="12" heuresTDUE="6" heuresTPUE="12" idEnseignantRef="22">
+						<Epreuve idEpreuve="211" nomEpreuve="C1_CC1" coefEpreuve="0.15" natureEpreuve="écrit">
 						</Epreuve>
 					</UE>
 
-					<UE idUE="22" intituleUE="BE réseaux" heuresCMUE="0" heuresTDUE="2.5" heuresTPUE="15" idEnseignantRef="24">
-						<Epreuve idEpreuve="23" nomEpreuve="compte_rendu" coefEpreuve="0.25" natureEpreuve="écrit">
+					<UE idUE="212" intituleUE="Applications internet et programmation socket" heuresCMUE="7.5" heuresTDUE="0" heuresTPUE="6" idEnseignantRef="21">
+						<Epreuve idEpreuve="212" nomEpreuve="compte_rendu" coefEpreuve="0.25" natureEpreuve="écrit">
 						</Epreuve>
 					</UE>
 
-
+					<UE idUE="212" intituleUE="BE réseaux" heuresCMUE="0" heuresTDUE="2.5" heuresTPUE="15" idEnseignantRef="21">
+						<Epreuve idEpreuve="213" nomEpreuve="compte_rendu" coefEpreuve="0.25" natureEpreuve="écrit">
+						</Epreuve>
+					</UE>
 		</UF>
 
 
-		<UF codeApogeeUF="I3MIIL11" nomUF="POO et Graphes" heterogeneUF="true" continueUF="false" evalCompetenceUF="false" totalPresentielUF="42" coefUF="1" ectsUF="3" idEnseignantRef="3" idGrandDomaineRef="1" idSemestreRef="1">
+		<UF codeApogeeUF="I3MIIL11" nomUF="POO et Graphes" heterogeneUF="true" continueUF="false" evalCompetenceUF="false" totalPresentielUF="42" coefUF="1" ectsUF="3" idEnseignantRef="23" idGrandDomaineRef="21" idSemestreRef="1">
 
-			<UE idUE="23" intituleUE="Introduction à la POO" heuresCMUE="6.75" heuresTDUE="10" heuresTPUE="0" idEnseignantRef="23">
-
-					<Epreuve idEpreuve="23" nomEpreuve="epreuve_poo" coefEpreuve="0.18" natureEpreuve="qcm">
+			<UE idUE="221" intituleUE="Introduction à la POO" heuresCMUE="6.75" heuresTDUE="10" heuresTPUE="0" idEnseignantRef="32">
+					<Epreuve idEpreuve="221" nomEpreuve="epreuve_poo" coefEpreuve="0.18" natureEpreuve="qcm">
 					</Epreuve>
 			</UE>
 
-			<UE idUE="23" intituleUE="Graphes" heuresCMUE="10" heuresTDUE="8.75" heuresTPUE="0" idEnseignantRef="23">
-
-					<Epreuve idEpreuve="24" nomEpreuve="epreuve_graphes" coefEpreuve="0.18" natureEpreuve="ecrit">
+			<UE idUE="222" intituleUE="Graphes" heuresCMUE="10" heuresTDUE="8.75" heuresTPUE="0" idEnseignantRef="23">
+					<Epreuve idEpreuve="222" nomEpreuve="epreuve_graphes" coefEpreuve="0.18" natureEpreuve="ecrit">
 					</Epreuve>
 			</UE>
 
-			<UE idUE="23" intituleUE="BE Graphes" heuresCMUE="0" heuresTDUE="0" heuresTPUE="20" idEnseignantRef="23">
-
-					<Epreuve idEpreuve="25" nomEpreuve="expose_be_graphes" coefEpreuve="0.18" natureEpreuve="oral_demonstration">
+			<UE idUE="223" intituleUE="BE Graphes" heuresCMUE="0" heuresTDUE="0" heuresTPUE="20" idEnseignantRef="23">
+					<Epreuve idEpreuve="223" nomEpreuve="expose_be_graphes" coefEpreuve="0.18" natureEpreuve="oral_demonstration">
 					</Epreuve>
 			</UE>
 
 		</UF>
 
-		<UF codeApogeeUF="I1ANLA11" nomUF="CSH" heterogeneUF="true" continueUF="true" evalCompetenceUF="false" totalPresentielUF="64" coefUF="1" ectsUF="3" idEnseignantRef="6" idGrandDomaineRef="2" idSemestreRef="1">
+		<UF codeApogeeUF="I3CCGE41" nomUF="Gestion de l'entreprise et business English" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="88" coefUF="0,166667" ectsUF="5" idEnseignantRef="27" idGrandDomaineRef="22" idSemestreRef="21">
+					<UE idUE="251" intituleUE="Business Game, Simgest" heuresCMUE="0" heuresTDUE="10" heuresTPUE="0" idEnseignantRef="27">
+						<Epreuve idEpreuve="251" nomEpreuve="oral_simgest" coefEpreuve="0.3" natureEpreuve="oral">
+						</Epreuve>
+					</UE>
 
-				<UE idUE="4" intituleUE="LV1" heuresCMUE="30" heuresTDUE="" heuresTPUE="" idEnseignantRef="6">
-					<Epreuve idEpreuve="4" nomEpreuve="CC1" coefEpreuve="0.6" natureEpreuve="écrit">
-					</Epreuve>
-				</UE>
+					<UE idUE="252" intituleUE="Gestion financière" heuresCMUE="5" heuresTDUE="0" heuresTPUE="0" idEnseignantRef="27">
+						<Epreuve idEpreuve="252" nomEpreuve="qcm_finance" coefEpreuve="0.2" natureEpreuve="qcm">
+						</Epreuve>
+					</UE>
 
-				<UE idUE="5" intituleUE="LV2" heuresCMUE="15" heuresTDUE="" heuresTPUE="" idEnseignantRef="6">
-					<Epreuve idEpreuve="5" nomEpreuve="CC1" coefEpreuve="0.4" natureEpreuve="écrit">
-					</Epreuve>
-				</UE>
+					<UE idUE="253" intituleUE="English business" heuresCMUE="0" heuresTDUE="12.5" heuresTPUE="0" idEnseignantRef="28">
+						<Epreuve idEpreuve="253" nomEpreuve="exam_english_business" coefEpreuve="0.3" natureEpreuve="oral">
+						</Epreuve>
+					</UE>
 
+					<UE idUE="254" intituleUE="LV2" heuresCMUE="0" heuresTDUE="2.5" heuresTPUE="15" idEnseignantRef="29">
+						<Epreuve idEpreuve="254" nomEpreuve="exam_lv2" coefEpreuve="0.2" natureEpreuve="comprehension_orale_ecrite">
+						</Epreuve>
+					</UE>
 		</UF>
+
 	</UFs>
 
-
-
-
-
 	<GrandsDomaines>
-		<GrandDomaine idGrandDomaine="1" nomGrandDomaine="Sciences Appliquées">
+		<GrandDomaine idGrandDomaine="21" nomGrandDomaine="UF Scientifique">
 		</GrandDomaine>
-		<GrandDomaine idGrandDomaine="2" nomGrandDomaine="Sciences humaines">
+		<GrandDomaine idGrandDomaine="22" nomGrandDomaine="UF Transverses">
 		</GrandDomaine>
 	</GrandsDomaines>
 
 
 	<Formations>
-		<Formation idFormation="1" nomFormation="1ère année" idDepartementRef="1">
+		<Formation idFormation="21" nomFormation="3STPI" idDepartementRef="21">
 		</Formation>
 	</Formations>
 
 	<Semestres>
-		<Semestre idSemestre="1" nomSemestre="Semestre 1">
+		<Semestre idSemestre="21" nomSemestre="3MIC IR">
 		</Semestre>
 	</Semestres>
 
