@@ -20,7 +20,7 @@
 				<chefDeDepartement>10</chefDeDepartement>
 				<Enseignants>
 					<Enseignant idEnseignant="10" nomEnseignant="Guermouche" prenomEnseignant="Nawal" emailEnseignant="nawal.guermouche@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI108" telEnseignant="+33615489875" ></Enseignant>
-					<Enseignant idEnseignant="11" nomEnseignant="Verdanat" prenomEnseignant="François" emailEnseignant="françois.verdanat@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI109" telEnseignant="+33675489875" ></Enseignant>
+					<Enseignant idEnseignant="11" nomEnseignant="Vernadat" prenomEnseignant="François" emailEnseignant="françois.verdanat@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI109" telEnseignant="+33675489875" ></Enseignant>
 					<Enseignant idEnseignant="12" nomEnseignant="Baron" prenomEnseignant="Christian" emailEnseignant="baron@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI108" telEnseignant="+33615489775" ></Enseignant>
 					<Enseignant idEnseignant="13" nomEnseignant="Huguet" prenomEnseignant="Marie-Jo" emailEnseignant="huguet@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI109" telEnseignant="+33617889875"></Enseignant>
 					<Enseignant idEnseignant="14" nomEnseignant="Nicomette" prenomEnseignant="Vincent" emailEnseignant="Nicomette@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI110" telEnseignant="+33715489875"></Enseignant>
