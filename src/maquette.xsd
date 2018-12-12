@@ -18,7 +18,7 @@
       <xs:element name="UE" ref="UEType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Competence" ref="CompetenceType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Enseignant" ref="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Departement" ref="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:ele	ment name="Departement" ref="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="UF" ref="UFType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Formation" ref="FormationType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="SousFormation" ref="SousFormationType" minOccurs="1" maxOccurs="unbounded"/>
