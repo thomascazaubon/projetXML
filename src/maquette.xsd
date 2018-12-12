@@ -64,7 +64,7 @@
 			  <xs:field xpath="@idCompetence" />
 		  </xs:key>
 	  </xs:element>
-	
+
     </xs:sequence>
   </xs:complexType>
 
@@ -147,19 +147,19 @@
 
   <xs:complexType name="MaquetteType">
     <xs:sequence>
-      <xs:element name="Departement" type="xs:token" minOccurs="1" maxOccurs="unbounded">  
+      <xs:element name="Departement" type="xs:token" minOccurs="1" maxOccurs="unbounded">
 			<xs:keyref name="MqtDepartementRef" refer="DepartementKey">
 		    	<xs:selector xpath="." />
 		    	<xs:field xpath="Departement" />
 		  	</xs:keyref>
 	  </xs:element>
-      <xs:element name="Formation" type="xs:token" minOccurs="1" maxOccurs="unbounded">  
+      <xs:element name="Formation" type="xs:token" minOccurs="1" maxOccurs="unbounded">
 			<xs:keyref name="MqtFormationRef" refer="FormationKey">
 		    	<xs:selector xpath="." />
 		    	<xs:field xpath="Formation" />
 		  	</xs:keyref>
 	  </xs:element>
-      <xs:element name="UF" type="xs:token" minOccurs="1" maxOccurs="unbounded">  
+      <xs:element name="UF" type="xs:token" minOccurs="1" maxOccurs="unbounded">
 			<xs:keyref name="MqtUFRef" refer="UFKey">
 		    	<xs:selector xpath="." />
 		    	<xs:field xpath="UF" />
@@ -170,20 +170,20 @@
   </xs:complexType>
 
   <xs:complexType name ="EpreuveType">
-	
+
     <xs:attribute name="idEpreuve" type="xs:token"/>
 	<xs:attribute name="nomEpreuve" type="xs:string"/>
   	<xs:attribute name="codeApogeeEpreuve" type="xs:string"/>
 	<xs:attribute name="coefEpreuve" type="xs:decimal"/>
 	<xs:attribute name="natureEpreuve" type="xs:string"/>
-    
+
   </xs:complexType>
 
   <xs:complexType name ="UEType">
 	<xs:sequence>
     	<xs:element name="Epreuves" type="EpreuvesType" minOccurs="0"/>
     	<xs:element name="Competences" type="CompetencesType" minOccurs="0"/>
-		<xs:element name="enseignantResponsable" type="xs:token">  
+		<xs:element name="enseignantResponsable" type="xs:token">
 			<xs:keyref name="EnseignantKeyRef" refer="EnseignantKey">
 		    	<xs:selector xpath="." />
 		    	<xs:field xpath="enseignantResponsable" />
@@ -195,7 +195,7 @@
   	<xs:attribute name="heuresCMUE" type="xs:decimal"/>
     <xs:attribute name="heuresTDUE" type="xs:decimal"/>
     <xs:attribute name="heuresTPUE" type="xs:decimal"/>
-    
+
   </xs:complexType>
 
   <xs:complexType name ="CompetenceType">
@@ -223,17 +223,17 @@
 		</xs:element>
 		<xs:element name="Enseignants" type="EnseignantsType" />
 	</xs:sequence>
-   
+
     <xs:attribute name="idDepartement" type="xs:token"/>
     <xs:attribute name="nomDepartement" type="xs:string"/>
     <xs:attribute name="acronymeDepartement" type="xs:string"/>
     <xs:attribute name="dateCreationDepartement" type="xs:date"/>
-    
+
   </xs:complexType>
 
   <xs:complexType name ="UFType">
 	<xs:sequence>
-		<xs:element name="enseignantResponsable" type="xs:token">  
+		<xs:element name="enseignantResponsable" type="xs:token">
 			<xs:keyref name="UFEnseignantKeyRef" refer="EnseignantKey">
 		    	<xs:selector xpath="." />
 		    	<xs:field xpath="enseignantResponsable" />
@@ -253,7 +253,7 @@
 		</xs:element>
 		<xs:element name="UEs" type="UEsType" minOccurs="0"/>
 	</xs:sequence>
-    
+
 	<xs:attribute name="codeApogeeUF" type="xs:token"/>
     <xs:attribute name="nomUF" type="xs:string"/>
     <xs:attribute name="heterogeneUF" type="xs:boolean"/>
@@ -262,12 +262,12 @@
     <xs:attribute name="totalPresentielUF" type="xs:decimal"/>
     <xs:attribute name="coefUF" type="xs:decimal"/>
     <xs:attribute name="ectsUF" type="xs:integer"/>
-    
+
   </xs:complexType>
 
   <xs:complexType name ="FormationType">
 	<xs:sequence>
-		<xs:element name="SousFormations" type="SousFormationsType" />
+		<xs:element name="SousFormations" type="SousFormationsType" minOccurs="0" />
 		<xs:element name="departement" type="xs:token">
 			<xs:keyref name="departementRef" refer="DepartementKey">
 		    	<xs:selector xpath="." />
@@ -275,11 +275,11 @@
 		  	</xs:keyref>
 		</xs:element>
 	</xs:sequence>
-    
+
     <xs:attribute name="idFormation" type="xs:token"/>
     <xs:attribute name="nomFormation" type="xs:string"/>
     <xs:attribute name="acronymeFormation" type="xs:string"/>
-    
+
   </xs:complexType>
 
   <xs:complexType name ="SousFormationType">
