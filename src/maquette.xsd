@@ -147,15 +147,9 @@
 
   <xs:complexType name="MaquetteType">
     <xs:sequence>
-      <xs:element name="Epreuve" type="EpreuveType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="UE" type="UEType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Competence" type="CompetenceType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Enseignant" type="EnseignantType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Departement" type="DepartementType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="UF" type="UFType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Formation" type="FormationType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="GrandDomaine" type="GrandDomaineType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="Semestre" type="SemestreType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="UF" type="UFType" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="nomMaquette" type="xs:string"/>
   </xs:complexType>
