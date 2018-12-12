@@ -3,7 +3,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 	<xs:element name="Gestion" type="gestionType"/>
-	
+
 	<xs:complexType name="gestionType">
 		<xs:sequence>
 		 	<xs:element name="Parcelles" type="ParcellesType"/>
@@ -21,7 +21,7 @@
 			<xs:sequence>
 				<xs:element name="section" type="xs:string"/>
 				<xs:element name="superficie" type="xs:string"/>
-				<xs:element name="Gestionnaire" type="xs:token">	
+				<xs:element name="Gestionnaire" type="xs:token">
 				<xs:keyref name="GestRef" refer="GestKey">
 					<xs:selector xpath="Parcelle"/>
 					<xs:field xpath="Gestionnaire"/>
@@ -41,9 +41,9 @@
 			</xs:key>
 			</xs:element>
 		</xs:sequence>
-		
+
 	</xs:complexType>
-		
+
 	<xs:complexType name="GestionnaireType">
 			<xs:sequence>
 				<xs:element name="nom" type="xs:string"/>
@@ -59,7 +59,7 @@
 			<xs:element name="ActTraitement" type="ActTraitementType"/>
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="ActAgricoleType">
 		<xs:sequence maxOccurs="unbounded">
 			<xs:element name="Semaine" type="xs:integer"/>
@@ -79,7 +79,7 @@
 
 	<xs:simpleType name="ActAgricoleTypeAccepted">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Anti-Insectes"/>                  
+			<xs:enumeration value="Anti-Insectes"/>
 			<xs:enumeration value="Récolte"/>
 		</xs:restriction>
 	</xs:simpleType>

@@ -1,1 +1,38 @@
- 
+<?xml version="1.0" encoding="utf-8" ?>
+<GestionMaquettes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="maquette.xsd">
+
+	<maquettes>
+		<maquette>
+
+		</maquette>
+
+		<maquette>
+		</maquette>
+	</maquettes>
+
+	<Departements>
+		<departement>
+		<idDepartement>1</idDepartement>
+		<nomDepartement>STPI</nomDepartement>
+		</departement>
+	</Departements>
+
+	<Formations>
+		<Formation nomFormation= "Modélisation, Informatique et Communication"  idFormation="20" acronymeFormation="MIC"  idDepartementRef="99" >
+                <SousFormation> IR </SousFormation>
+		</Formation>
+
+		<Formation>
+		</Formation>
+	</Formations>
+
+    <UFS>
+        <UF> codeApogeeUF="I3MIIF21" heterogeneUF="1" continueUF="1" evalCompetenceUF="1" totalPresentielUF="59" coefUF="0,25" ectsUF="5" idEnseignantRef="" idGrandDomaineRef="" idSemestreRef="" </UF>
+
+
+
+    </UFs>
+
+
+</GestionMaquettes>
