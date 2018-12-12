@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GestionMaquettes>
+	<Maquettes>
+		<Maquette nomMaquette="5A SDBD">
+			<Departement>10</Departement>
+			<Formation>10</Formation>
+			<UF>I5IRIL12</UF>
+			<UF>I5IRSF11</UF>
+			<UF>I5IRAD12</UF>
+			<UF>I5IRBD12</UF>
+			<UF>I5IRSD12</UF>
+			<UF>I5IRRS41</UF>
+			<UF>I5CCST11</UF>
+			<UF>I5CCST21</UF>
+		</Maquette>
+	</Maquettes>
+	<Donnees>
+		<Departements>
+			<Departement idDepartement="10" nomDepartement="Génie Électrique et Informatique" acronymeDepartement="GEI" dateCreationDepartement="1963" idChefDeDepartement="10">
+				<Enseignant idEnseignant="10" nomEnseignant="Guermouche" prenomEnseignant="Nawal" emailEnseignant="nawal.guermouche@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI108" telEnseignant="+33615489875" idDepartementRef="10"></Enseignant>
+				<Enseignant idEnseignant="11" nomEnseignant="Verdanat" prenomEnseignant="François" emailEnseignant="françois.verdanat@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI109" telEnseignant="+33675489875" idDepartementRef="10"></Enseignant>
+				<Enseignant idEnseignant="12" nomEnseignant="Baron" prenomEnseignant="Christian" emailEnseignant="baron@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI108" telEnseignant="+33615489775" idDepartementRef="10"></Enseignant>
+				<Enseignant idEnseignant="13" nomEnseignant="Huguet" prenomEnseignant="Marie-Jo" emailEnseignant="huguet@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI109" telEnseignant="+33617889875" idDepartementRef="10"></Enseignant>
+				<Enseignant idEnseignant="14" nomEnseignant="Nicomette" prenomEnseignant="Vincent" emailEnseignant="Nicomette@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI110" telEnseignant="+33715489875" idDepartementRef="10"></Enseignant>
+				<Enseignant idEnseignant="15" nomEnseignant="Yangui" prenomEnseignant="Samir" emailEnseignant="yangui@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI104" telEnseignant="+33615487875" idDepartementRef="10"></Enseignant>
+				<Enseignant idEnseignant="16" nomEnseignant="Chassot" prenomEnseignant="Christophe" emailEnseignant="chassot@insa-toulouse.fr" gradeEnseignant="Professeur" bureauEnseignant="GEI108" telEnseignant="+33615489875" idDepartementRef="10"></Enseignant>
+				<Enseignant idEnseignant="16" nomEnseignant="Esquirol" prenomEnseignant="Patrick" emailEnseignant="esquirol@insa-toulouse.fr" gradeEnseignant="Professeur" bureauEnseignant="GEI108" telEnseignant="+33615475875" idDepartementRef="10"></Enseignant>
+			</Departement>
+		</Departements>
+
+		<Formations>
+			<Formation idFormation="10" nomFormation="Informatique et Réseaux" idDepartementRef="10" acronymeSousFormation="IR">
+				<SousFormation idSousFormation="10" nomSousFormation="Orientation Systèmes Distribués et Big Data" acronymeSousFormation="SDBD" idFormationRef="10">	
+				</SousFormation>	
+			</Formation>
+		</Formations>
+
+		<GrandDomaines>
+			<GrandDomaine idGrandDomaine="10" nomGrandDomaine="Tronc commun"></GrandDomaine>
+			<GrandDomaine idGrandDomaine="11" nomGrandDomaine="Mineure"></GrandDomaine>
+			<GrandDomaine idGrandDomaine="12" nomGrandDomaine="Stages"></GrandDomaine>
+		</GrandDomaines>
+
+		<Semestres>
+			<Semestre idSemestre="9" nomSemestre="S9"></Semestre>
+		</Semestres>
+
+		<UFs>
+			<UF nomUF="Ingénierie logicielle et architectures orientées services" codeApogeeUF="I5IRIL12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="61.75" coefUF="1" ectsUF="4" idEnseignantRef="10" idGrandDomaine="10" idSemestreRef="9">
+				<UE idUE="10" intituleUE="Ingénierie logicielle" heuresCMUE="11.25" heuresTDUE="8.75" idEnseignantRef="10">
+					<Competence idCompetence="10" nomCompetence="Dev un logiciel"></Competence>
+				</UE>
+				<UE idUE="11" intituleUE="Architectures oreintées services" heuresCMUE="7.5" heuresTDUE="15" heuresTPUE="19.25" idEnseignantRef="10"></UE>
+			</UF>
+			<UF nomUF="Sureté de fonctionnement" codeApogeeUF="I5IRSF11" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.75" coefUF="1" ectsUF="3" idEnseignantRef="11" idGrandDomaine="10" idSemestreRef="9">
+				<UE idUE="12" intituleUE="Principe de la sureté de fonctionnement" heuresCMUE="13.75" heuresTPUE="8.25" idEnseignantRef="11">
+					<Epreuve idEpreuve="10" nomEpreuve="E1" coefEpreuve="0.33" natureEpreuve="Autre"></Epreuve>
+				</UE>
+				<UE idUE="13" intituleUE="Modèles temporels" heuresCMUE="6.25" heuresTPUE="8.25" idEnseignantRef="11">
+					<Epreuve idEpreuve="11" nomEpreuve="E2" coefEpreuve="0.33" natureEpreuve="IE"></Epreuve>
+				</UE>
+			</UF>
+			<UF nomUF="Analyse descriptive et prédictive" codeApogeeUF="I5IRAD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.00" coefUF="1" ectsUF="4" idEnseignantRef="13" idGrandDomaine="10" idSemestreRef="9">
+				<UE idUE="14" intituleUE="Analyse exploratoire et visualisation de données" heuresCMUE="10" heuresTPUE="13.75" idEnseignantRef="13"></UE>
+				<UE idUE="15" intituleUE="Apprentissage" heuresCMUE="12.5" heuresTPUE="13.75" idEnseignantRef="13"></UE>
+			</UF>
+			<UF nomUF="Infrastructures pour le traitement de données massives" codeApogeeUF="I5IRBD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="61.00" coefUF="1" ectsUF="4" idEnseignantRef="14" idGrandDomaine="10" idSemestreRef="9"></UF>
+			<UF nomUF="Analyse prescriptive" codeApogeeUF="I5IRSD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="60.50" coefUF="1" ectsUF="6" idEnseignantRef="16" idGrandDomaine="11" idSemestreRef="9">
+				<UE idUE="16" intituleUE="Transitoire" heuresCMUE="6.25" heuresTPUE="5.5" idEnseignantRef="13"></UE>
+				<UE idUE="17" intituleUE="Méthodes et outils" heuresCMUE="20" heuresTPUE="13.75" idEnseignantRef="13"></UE>
+				<UE idUE="17" intituleUE="Projet analyse prescriptive" heuresCMUE="1.25" heuresTPUE="13.75" idEnseignantRef="13"></UE>
+			</UF>
+			<UF nomUF="Robotique de Service" codeApogeeUF="I5IRRS41" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.00" coefUF="1" ectsUF="6" idEnseignantRef="16" idGrandDomaine="11" idSemestreRef="9">
+				<UE idUE="18" intituleUE="Virtualisation de fonctions réseaux" heuresCMUE="6.25" heuresTPUE="13.75" idEnseignantRef="16"></UE>
+			</UF>
+			<UF nomUF="Stage de 4e année" codeApogeeUF="I5CCST11" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" coefUF="1" ectsUF="9" idGrandDomaine="12" idSemestreRef="9"></UF>
+			<UF nomUF="Projet de fin d'étude 5eme année" codeApogeeUF="I5CCST21" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" coefUF="1" ectsUF="21" idGrandDomaine="12" idSemestreRef="9"></UF>
+		</UFs>
+	</Donnees>
+</GestionMaquettes>
