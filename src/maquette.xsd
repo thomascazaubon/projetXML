@@ -262,6 +262,7 @@
     <xs:attribute name="totalPresentielUF" type="xs:decimal"/>
     <xs:attribute name="coefUF" type="xs:decimal"/>
     <xs:attribute name="ectsUF" type="xs:integer"/>
+    <xs:attribute name="obligatoire" type="xs:string"/>
 
   </xs:complexType>
 

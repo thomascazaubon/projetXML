@@ -37,7 +37,6 @@
 
 					<Enseignant idEnseignant="2" nomEnseignant="CARREY" prenomEnseignant="Julian" emailEnseignant="carrey@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GP062" telEnseignant="0598221475" ></Enseignant>
 
-					<Enseignant idEnseignant="3" nomEnseignant="LE BOTLAN" prenomEnseignant="Didier" emailEnseignant="lebotlan@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GEI045" telEnseignant="0598521475" ></Enseignant>
 
 					<Enseignant idEnseignant="4" nomEnseignant="NOBLE" prenomEnseignant="Pascal" emailEnseignant="noble@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GMM128" telEnseignant="0598521476" ></Enseignant>
 
@@ -50,6 +49,8 @@
       <Departement idDepartement="10" nomDepartement="Génie Électrique et Informatique" acronymeDepartement="GEI" dateCreationDepartement="1963-01-01" >
 				<chefDeDepartement>10</chefDeDepartement>
 				<Enseignants>
+
+					<Enseignant idEnseignant="3" nomEnseignant="LE BOTLAN" prenomEnseignant="Didier" emailEnseignant="lebotlan@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GEI045" telEnseignant="0598521475" ></Enseignant>
 					<Enseignant idEnseignant="10" nomEnseignant="Guermouche" prenomEnseignant="Nawal" emailEnseignant="nawal.guermouche@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI108" telEnseignant="+33615489875" ></Enseignant>
 					<Enseignant idEnseignant="11" nomEnseignant="Vernadat" prenomEnseignant="François" emailEnseignant="françois.verdanat@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI109" telEnseignant="+33675489875" ></Enseignant>
 					<Enseignant idEnseignant="12" nomEnseignant="Baron" prenomEnseignant="Christian" emailEnseignant="baron@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI108" telEnseignant="+33615489775" ></Enseignant>
@@ -65,12 +66,12 @@
 
 
 		<UFs>
-			<UF codeApogeeUF="I1AHPH21" nomUF="Physique" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="70" coefUF="1" ectsUF="5">
+			<UF codeApogeeUF="I1AHPH21" nomUF="Physique" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="70" coefUF="1" ectsUF="5" obligatoire="O">
 				<enseignantResponsable>2</enseignantResponsable>
 				<idGrandDomaineRef>1</idGrandDomaineRef>
 				<idSemestreRef>1</idSemestreRef>
 				<UEs>
-						<UE idUE="1" intituleUE="APP Optique" heuresCMUE="40.75" heuresTDUE="0" heuresTPUE="0">
+						<UE idUE="1" intituleUE="APP Optique" heuresCMUE="40.75">
 							<Epreuves>
 								<Epreuve idEpreuve="1" nomEpreuve="C1_CC1" coefEpreuve="0.15" natureEpreuve="écrit"></Epreuve>
 							</Epreuves>
@@ -87,7 +88,7 @@
 			</UF>
 
 
-			<UF codeApogeeUF="I1ANIF11" nomUF="Maths-Algo" heterogeneUF="true" continueUF="false" evalCompetenceUF="false" totalPresentielUF="42" coefUF="1" ectsUF="3">
+			<UF codeApogeeUF="I1ANIF11" nomUF="Maths-Algo" heterogeneUF="true" continueUF="false" evalCompetenceUF="false" totalPresentielUF="42" coefUF="1" ectsUF="3" obligatoire="O">
 						<enseignantResponsable>3</enseignantResponsable>
 						<idGrandDomaineRef>1</idGrandDomaineRef>
 						<idSemestreRef>1</idSemestreRef>
@@ -106,7 +107,7 @@
 
 			</UF>
 
-			<UF codeApogeeUF="I1ANLA11" nomUF="CSH" heterogeneUF="true" continueUF="true" evalCompetenceUF="false" totalPresentielUF="64" coefUF="1" ectsUF="3">
+			<UF codeApogeeUF="I1ANLA11" nomUF="CSH" heterogeneUF="true" continueUF="true" evalCompetenceUF="false" totalPresentielUF="64" coefUF="1" ectsUF="3" obligatoire="O">
 					<enseignantResponsable>6</enseignantResponsable>
 					<idGrandDomaineRef>2</idGrandDomaineRef>
 					<idSemestreRef>1</idSemestreRef>
@@ -126,7 +127,7 @@
 						</UE>
 					</UEs>
 				</UF>
-        <UF nomUF="Ingénierie logicielle et architectures orientées services" codeApogeeUF="I5IRIL12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="61.75" coefUF="1" ectsUF="4">
+        <UF nomUF="Ingénierie logicielle et architectures orientées services" codeApogeeUF="I5IRIL12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="61.75" coefUF="1" ectsUF="4" obligatoire="O">
   				<enseignantResponsable>10</enseignantResponsable>
   				<idGrandDomaineRef>10</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
@@ -142,7 +143,7 @@
   					</UE>
   				</UEs>
   			</UF>
-  			<UF nomUF="Sureté de fonctionnement" codeApogeeUF="I5IRSF11" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.75" coefUF="1" ectsUF="3">
+  			<UF nomUF="Sureté de fonctionnement" codeApogeeUF="I5IRSF11" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.75" coefUF="1" ectsUF="3" obligatoire="O">
   				<enseignantResponsable>11</enseignantResponsable>
   				<idGrandDomaineRef>10</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
@@ -161,7 +162,7 @@
   					</UE>
   				</UEs>
   			</UF>
-  			<UF nomUF="Analyse descriptive et prédictive" codeApogeeUF="I5IRAD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.00" coefUF="1" ectsUF="4">
+  			<UF nomUF="Analyse descriptive et prédictive" codeApogeeUF="I5IRAD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.00" coefUF="1" ectsUF="4" obligatoire="O">
   				<enseignantResponsable>13</enseignantResponsable>
   				<idGrandDomaineRef>10</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
@@ -174,12 +175,12 @@
   					</UE>
   				</UEs>
   			</UF>
-  			<UF nomUF="Infrastructures pour le traitement de données massives" codeApogeeUF="I5IRBD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="61.00" coefUF="1" ectsUF="4">
+  			<UF nomUF="Infrastructures pour le traitement de données massives" codeApogeeUF="I5IRBD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="61.00" coefUF="1" ectsUF="4" obligatoire="O">
   				<enseignantResponsable>14</enseignantResponsable>
   				<idGrandDomaineRef>10</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   			</UF>
-  			<UF nomUF="Analyse prescriptive" codeApogeeUF="I5IRSD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="60.50" coefUF="1" ectsUF="6">
+  			<UF nomUF="Analyse prescriptive" codeApogeeUF="I5IRSD12" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="60.50" coefUF="1" ectsUF="6" obligatoire="O">
   				<enseignantResponsable>16</enseignantResponsable>
   				<idGrandDomaineRef>11</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
@@ -195,7 +196,7 @@
   					</UE>
   				</UEs>
   			</UF>
-  			<UF nomUF="Robotique de Service" codeApogeeUF="I5IRRS41" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.00" coefUF="1" ectsUF="6">
+  			<UF nomUF="Robotique de Service" codeApogeeUF="I5IRRS41" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" totalPresentielUF="50.00" coefUF="1" ectsUF="6" obligatoire="O">
   				<enseignantResponsable>16</enseignantResponsable>
   				<idGrandDomaineRef>11</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
@@ -205,12 +206,12 @@
   					</UE>
   				</UEs>
   			</UF>
-  			<UF nomUF="Stage de 4e année" codeApogeeUF="I5CCST11" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" coefUF="1" ectsUF="9">
+  			<UF nomUF="Stage de 4e année" codeApogeeUF="I5CCST11" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" coefUF="1" ectsUF="9" obligatoire="O">
   				<enseignantResponsable>16</enseignantResponsable>
   				<idGrandDomaineRef>12</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   			</UF>
-  			<UF nomUF="Projet de fin d'étude 5eme année" codeApogeeUF="I5CCST21" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" coefUF="1" ectsUF="21">
+  			<UF nomUF="Projet de fin d'étude 5eme année" codeApogeeUF="I5CCST21" heterogeneUF="false" continueUF="true" evalCompetenceUF="false" coefUF="1" ectsUF="21" obligatoire="O">
   				<enseignantResponsable>16</enseignantResponsable>
   				<idGrandDomaineRef>12</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
@@ -243,7 +244,7 @@
 		</Formations>
 
 		<Semestres>
-			<Semestre idSemestre="1" nomSemestre="Semestre 1"></Semestre>
+			<Semestre idSemestre="1" nomSemestre="S1"></Semestre>
       	<Semestre idSemestre="9" nomSemestre="S9"></Semestre>
 		</Semestres>
 	</Donnees>
