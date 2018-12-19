@@ -14,56 +14,29 @@
         <head>
 
         <title></title>
-
+		<link rel="stylesheet" href="test.css"/>
     </head>
-<style type="text/css" media="screen">
-table {
- border-width:1px; 
- border-style:solid; 
- border-color:black;
- width:100%;
-border-collapse:collapse;
- }
-tr{
-
-
-border-collapse:collapse;
-}
-th {
- border-width:1px;
- border-style:solid; 
-padding:1%;
-text-align:center;
-}
-td { 
- border-width:1px;
- border-style:solid; 
- border-color:blue;
-border-collapse:collapse;
-vertical-align: baseline;
-padding:1%;
- }
-</style>
 
     <body>
 	<xsl:for-each select="GestionMaquettes/Maquettes/Maquette">
-        <p>Maquette de : <xsl:value-of select="@nomMaquette" ></xsl:value-of></p>
+		<section class="maquette">
+        <h2 class="titre_maquette">Maquette de : <xsl:value-of select="@nomMaquette" ></xsl:value-of></h2>
 		<section>
 			<table>
 			<tr>
 				<th>Grand Domaine</th>
-				<th>Obligatoire</th>
-				<th>Semestre</th>		
+				<th class="petit">Obligatoire</th>
+				<th class="petit">Semestre</th>		
 				<th>Code Apogee</th>
-				<th>Nom</th>				
-				<th>Email Responsable</th>				
-				<th>Hétérogène</th>				
-				<th>Continuité</th>				
-				<th>Eval par compétences</th>
+				<th>Nom UF / UE</th>				
+				<th class="email">Email Responsable</th>				
+				<th class="petit">Hétérogène</th>				
+				<th class="petit">Continuité</th>				
+				<th class="petit">Eval par compétences</th>
 				<th>CM - TD - TP</th>			
 				<th>Total Présentiel</th>
-				<th>Coef</th>				
-				<th>ECTS</th>		
+				<th class="petit">Coef</th>				
+				<th class="petit">ECTS</th>		
 			</tr>
 			<xsl:for-each select="./UF">
 				<tr>
@@ -89,16 +62,16 @@ padding:1%;
 					  </td>
 					  <td> <xsl:value-of select="@obligatoire" ></xsl:value-of> </td>
 					  <td> <xsl:value-of select="@codeApogeeUF" ></xsl:value-of> </td> 
-					  <td> <p><xsl:value-of select="@nomUF" ></xsl:value-of></p>
+					  <td> <p class="UF"><xsl:value-of select="@nomUF" ></xsl:value-of></p>
 							<xsl:for-each select="./UEs/UE"> 
 							  <p><xsl:value-of select="@intituleUE" ></xsl:value-of></p>
 							</xsl:for-each>
 					  </td>
-					  <td> <xsl:for-each select="/GestionMaquettes/Donnees/Departements/Departement/Enseignants/Enseignant">
+					  <td class="case_uf"> <p class="UF"><xsl:for-each select="/GestionMaquettes/Donnees/Departements/Departement/Enseignants/Enseignant">
 							<xsl:if test="@idEnseignant = $codeER"> 
-							  <p><xsl:value-of select="@emailEnseignant" ></xsl:value-of></p>
-							</xsl:if>  
-						</xsl:for-each>
+							  <xsl:value-of select="@emailEnseignant" ></xsl:value-of>
+							</xsl:if>
+						</xsl:for-each></p>
 						<xsl:for-each select="./UEs/UE"> 
 							<xsl:variable name="codeERUE" select='./enseignantResponsable' />
 							 <xsl:for-each select="/GestionMaquettes/Donnees/Departements/Departement/Enseignants/Enseignant">
@@ -123,7 +96,7 @@ padding:1%;
 					  </xsl:if><xsl:if test="@evalCompetenceUF = 'false'">  
 					  	<td>NON</td>
 					  </xsl:if>
-						<td><p></p><xsl:for-each select="./UEs/UE"> 
+						<td><p class="vide">N</p><xsl:for-each select="./UEs/UE"> 
 							<p><xsl:if test="@heuresCMUE != ''"><xsl:value-of select="@heuresCMUE" ></xsl:value-of></xsl:if><xsl:if test="@heuresTDUE != ''"> - <xsl:value-of select="@heuresTDUE" ></xsl:value-of></xsl:if><xsl:if test="@heuresTPUE != ''"> - <xsl:value-of select="@heuresTPUE" ></xsl:value-of></xsl:if></p>
 						</xsl:for-each></td>
 					  <td> <xsl:value-of select="@totalPresentielUF" ></xsl:value-of> 
@@ -147,6 +120,7 @@ padding:1%;
 
 			</xsl:for-each>-->
 		</section>
+	</section>
 	</xsl:for-each>	
 
 <!-- <h2>Liste des noms :</h2>

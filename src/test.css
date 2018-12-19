@@ -1,0 +1,59 @@
+table {
+	 border-width:1px; 
+	 border-style:solid; 
+	 border-color:black;
+	 width:100%;
+	border-collapse:collapse;
+	font-size:0.8em;
+ }
+tr{
+	border-collapse:collapse;
+}
+th {
+	 border-width:1px;
+	 border-style:solid; 
+	 border-color:blue;
+	padding: 1% 11px;
+	text-align:center;
+}
+td { 
+	border-width:1px;
+	border-style:solid; 
+	border-color:blue;
+	border-collapse:collapse;
+	vertical-align: baseline;
+	padding: 1% 11px;
+	text-align: center;
+	white-space:nowrap;
+}
+.maquette{
+	background-color: rgba(198, 230, 230, 0.9);
+	padding: 0.5%;
+	margin: 0px;
+	/**border-block-start-width: 1px;
+	border-block-start-style:solid;
+	border-block-start-color:black;*/
+}
+body{
+padding: 0px;
+margin: 0px;
+}
+table:first-child {
+border-block-start-width: 0px;
+}
+.titre_maquette{
+	width:100%;
+	text-align:center;
+}
+.UF{
+	font-size:1.2em;
+}
+.email{
+	width: 18.5em;
+}
+.vide{
+ color: rgba(198, 230, 230, 0.9);
+}
+.case_uf span {
+	margin-left:2px;
+}
