@@ -1,7 +1,7 @@
 table {
 	 border-width:1px; 
 	 border-style:solid; 
-	 border-color:black;
+	 border-color:#ecf0f1;
 	 width:100%;
 	border-collapse:collapse;
 	font-size:0.8em;
@@ -12,31 +12,38 @@ tr{
 th {
 	 border-width:1px;
 	 border-style:solid; 
-	 border-color:blue;
+	 border-color:#ecf0f1;
 	padding: 1% 11px;
 	text-align:center;
+	background-color:#7f8c8d;
+	color:white;
 }
 td { 
 	border-width:1px;
 	border-style:solid; 
-	border-color:blue;
+	border-color:#ecf0f1;
 	border-collapse:collapse;
 	vertical-align: baseline;
 	padding: 1% 11px;
 	text-align: center;
 	white-space:nowrap;
+	background-color: #bdc3c7;
 }
 .maquette{
-	background-color: rgba(198, 230, 230, 0.9);
+	background-color: #ecf0f1;
 	padding: 0.5%;
 	margin: 0px;
 	/**border-block-start-width: 1px;
 	border-block-start-style:solid;
 	border-block-start-color:black;*/
 }
+.vide{
+ color: #bdc3c7;
+}
 body{
 padding: 0px;
 margin: 0px;
+background-color:#ecf0f1;
 }
 table:first-child {
 border-block-start-width: 0px;
@@ -44,6 +51,7 @@ border-block-start-width: 0px;
 .titre_maquette{
 	width:100%;
 	text-align:center;
+	color: #2c3e50;
 }
 .UF{
 	font-size:1.2em;
@@ -51,9 +59,21 @@ border-block-start-width: 0px;
 .email{
 	width: 18.5em;
 }
-.vide{
- color: rgba(198, 230, 230, 0.9);
-}
 .case_uf span {
 	margin-left:2px;
+}
+.GD1{
+	background-color:#e74c3c;
+}
+.GD2{
+	background-color:#3498db;
+}
+.GD3{
+	background-color:#2ecc71;
+}
+.GD4{
+	background-color:#9b59b6;
+}
+.GD5{
+	background-color:#1abc9c;
 }

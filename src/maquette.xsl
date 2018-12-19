@@ -25,8 +25,8 @@
 			<table>
 			<tr>
 				<th>Grand Domaine</th>
-				<th class="petit">Obligatoire</th>
-				<th class="petit">Semestre</th>		
+				<th class="petit">Semestre</th>	
+				<th class="petit">Obligatoire</th>	
 				<th>Code Apogee</th>
 				<th>Nom UF / UE</th>				
 				<th class="email">Email Responsable</th>				
@@ -48,12 +48,16 @@
             		  <xsl:variable name="codeGD" select='./idGrandDomaineRef' />
             		  <xsl:variable name="codeER" select='./enseignantResponsable' />
             		  <xsl:variable name="codeS" select='./idSemestreRef' />
-					  <td> <xsl:for-each select="/GestionMaquettes/Donnees/GrandsDomaines/GrandDomaine">
+					  <xsl:for-each select="/GestionMaquettes/Donnees/GrandsDomaines/GrandDomaine">
 							<xsl:if test="@idGrandDomaine = $codeGD">  
-							  <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of>
+							  <xsl:if test="@idGrandDomaine = 1"> <td class="GD1"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
+							  <xsl:if test="@idGrandDomaine = 2"> <td class="GD2"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
+							  <xsl:if test="@idGrandDomaine = 3"> <td class="GD3"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
+							  <xsl:if test="@idGrandDomaine = 4"> <td class="GD4"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
+							  <xsl:if test="@idGrandDomaine = 5"> <td class="GD5"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
 							</xsl:if>  
-						</xsl:for-each>  
-					  </td>
+					  </xsl:for-each>  
+					  
 					  <td> <xsl:for-each select="/GestionMaquettes/Donnees/Semestres/Semestre">
 							<xsl:if test="@idSemestre = $codeS">  
 							  <xsl:value-of select="@nomSemestre" ></xsl:value-of>
