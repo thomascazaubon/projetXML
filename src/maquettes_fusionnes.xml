@@ -13,7 +13,7 @@
 			<UF>I1ANIF11</UF>
 			<UF>I1ANLA11</UF>
 		</Maquette>
-    <Maquette nomMaquette="5A SDBD">
+    	<Maquette nomMaquette="5A SDBD">
 			<Departement>10</Departement>
 			<Formation>10</Formation>
 			<UF>I5IRIL12</UF>
@@ -25,6 +25,13 @@
 			<UF>I5CCST11</UF>
 			<UF>I5CCST21</UF>
 		</Maquette>
+		<Maquette nomMaquette="3MIC IR">
+			<Departement>21</Departement>
+			<Formation>21</Formation>
+			<UF>I3MIIF21</UF>
+			<UF>I3MIIL11</UF>
+			<UF>I3CCGE41</UF>
+		</Maquette>
 	</Maquettes>
 
 	<Donnees>
@@ -34,14 +41,9 @@
 				<Enseignants>
 
 					<Enseignant idEnseignant="1" nomEnseignant="PIC" prenomEnseignant="Jean-Stéphane" emailEnseignant="pic@insa-toulouse.fr" gradeEnseignant="Professeur" bureauEnseignant="STPI02" telEnseignant="0598751475"></Enseignant>
-
 					<Enseignant idEnseignant="2" nomEnseignant="CARREY" prenomEnseignant="Julian" emailEnseignant="carrey@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GP062" telEnseignant="0598221475" ></Enseignant>
-
-
 					<Enseignant idEnseignant="4" nomEnseignant="NOBLE" prenomEnseignant="Pascal" emailEnseignant="noble@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GMM128" telEnseignant="0598521476" ></Enseignant>
-
 					<Enseignant idEnseignant="5" nomEnseignant="LAFFITTE" prenomEnseignant="Jean-Claude" emailEnseignant="laffitte@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GC685" telEnseignant="0598581476" ></Enseignant>
-
 					<Enseignant idEnseignant="6" nomEnseignant="LECLERC" prenomEnseignant="Lucie" emailEnseignant="leclerc@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="CSH125" telEnseignant="0595347518" ></Enseignant>
 
 				</Enseignants>
@@ -59,8 +61,28 @@
 					<Enseignant idEnseignant="15" nomEnseignant="Yangui" prenomEnseignant="Samir" emailEnseignant="yangui@insa-toulouse.fr" gradeEnseignant="Enseignent-Chercheur" bureauEnseignant="GEI104" telEnseignant="+33615487875"></Enseignant>
 					<Enseignant idEnseignant="16" nomEnseignant="Chassot" prenomEnseignant="Christophe" emailEnseignant="chassot@insa-toulouse.fr" gradeEnseignant="Professeur" bureauEnseignant="GEI108" telEnseignant="+33615489875" ></Enseignant>
 					<Enseignant idEnseignant="16" nomEnseignant="Esquirol" prenomEnseignant="Patrick" emailEnseignant="esquirol@insa-toulouse.fr" gradeEnseignant="Professeur" bureauEnseignant="GEI108" telEnseignant="+33615475875" ></Enseignant>
+					<Enseignant idEnseignant="22" nomEnseignant="MONTEIL" prenomEnseignant="Thierry"  emailEnseignant="monteil@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GEI020" telEnseignant="0598223654" ></Enseignant>
+					<Enseignant idEnseignant="24" nomEnseignant="DILHAC" prenomEnseignant="Jean-Marie" emailEnseignant="dilhac@insa-toulouse.fr" gradeEnseignant="Enseignant-Chercheur" bureauEnseignant="GEI214" telEnseignant="0598592576" ></Enseignant>
+					<Enseignant idEnseignant="25" nomEnseignant="ROCACHER" prenomEnseignant="Thierry" emailEnseignant="rocacher@insa-toulouse.fr" gradeEnseignant="Enseignant" bureauEnseignant="GEI218" telEnseignant="0593481476" ></Enseignant>
+					<Enseignant idEnseignant="26" nomEnseignant="NOULLET" prenomEnseignant="Jean-Louis" emailEnseignant="noullet@insa-toulouse.fr" gradeEnseignant="Enseignant" bureauEnseignant="CEI126" telEnseignant="0595347620"></Enseignant>
 				</Enseignants>
 			</Departement>
+			<Departement idDepartement="22" nomDepartement="Centre Sciences Humaines" acronymeDepartement="CSH" dateCreationDepartement="1964-03-07" >
+					<chefDeDepartement>27</chefDeDepartement>
+						<Enseignants>
+							<Enseignant idEnseignant="27" nomEnseignant="LOMI" prenomEnseignant="Michel" emailEnseignant="lomi@insa-toulouse.fr" gradeEnseignant="Enseignant" bureauEnseignant="CSH026" telEnseignant="0595300560"></Enseignant>
+							<Enseignant idEnseignant="28" nomEnseignant="MERCIER" prenomEnseignant="Sylvie" emailEnseignant="mercier@insa-toulouse.fr" gradeEnseignant="Enseignant" bureauEnseignant="CSH114" telEnseignant="0533657620"></Enseignant>
+							<Enseignant idEnseignant="29" nomEnseignant="ABADIE" prenomEnseignant="Abadie" emailEnseignant="abadie@insa-toulouse.fr" gradeEnseignant="Enseignant" bureauEnseignant="CSH003" telEnseignant="0597897620" ></Enseignant>
+					</Enseignants>
+			</Departement>
+
+			<Departement idDepartement="23" nomDepartement="Sport, Intervenants et autres" acronymeDepartement="SIA" dateCreationDepartement="1970-04-11" >
+					<chefDeDepartement>30</chefDeDepartement>
+					<Enseignants>
+							<Enseignant idEnseignant="30" nomEnseignant="BAUP" prenomEnseignant="Jean-Luc" emailEnseignant="baup@insa-toulouse.fr" gradeEnseignant="Enseignant" bureauEnseignant="Gymnase6" telEnseignant="0595347256" ></Enseignant>
+							<Enseignant idEnseignant="31" nomEnseignant="DUPONT" prenomEnseignant="Thierry" emailEnseignant="dupont@insa-toulouse.fr" gradeEnseignant="Ingenieur" bureauEnseignant="NULL" telEnseignant="0542947256" ></Enseignant>
+					</Enseignants>
+		    </Departement>
 		</Departements>
 
 
@@ -216,18 +238,101 @@
   				<idGrandDomaineRef>5</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   			</UF>
+			<UF codeApogeeUF="I3MIIF21" nomUF="Programmation système et réseaux" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="59" coefUF="1" ectsUF="5">
+				<enseignantResponsable>16</enseignantResponsable>
+				<idGrandDomaineRef>6</idGrandDomaineRef>
+				<idSemestreRef>21</idSemestreRef>
+					<UEs>
+						<UE idUE="211" intituleUE="Programmation système et multithreading" heuresCMUE="12" heuresTDUE="6" heuresTPUE="12" >
+							<Epreuves>
+								<Epreuve idEpreuve="211" nomEpreuve="C1_CC1" coefEpreuve="0.15" natureEpreuve="écrit"></Epreuve>
+							</Epreuves>
+							<enseignantResponsable>22</enseignantResponsable>
+						</UE>
+						<UE idUE="212" intituleUE="Applications internet et programmation socket" heuresCMUE="7.5" heuresTDUE="0" heuresTPUE="6" >
+							<Epreuves>
+								<Epreuve idEpreuve="212" nomEpreuve="compte_rendu" coefEpreuve="0.25" natureEpreuve="écrit"></Epreuve>
+							</Epreuves>
+							<enseignantResponsable>16</enseignantResponsable>
+						</UE>
+						<UE idUE="212" intituleUE="BE réseaux" heuresCMUE="0" heuresTDUE="2.5" heuresTPUE="15">
+							<Epreuves>
+								<Epreuve idEpreuve="213" nomEpreuve="compte_rendu" coefEpreuve="0.25" natureEpreuve="écrit"></Epreuve>
+							</Epreuves>
+							<enseignantResponsable>16</enseignantResponsable>
+						</UE>
+					</UEs>
+			</UF>
+
+
+			<UF codeApogeeUF="I3MIIL11" nomUF="POO et Graphes" heterogeneUF="true" continueUF="false" evalCompetenceUF="false" totalPresentielUF="42" coefUF="1" ectsUF="3" >
+				<enseignantResponsable>13</enseignantResponsable>
+				<idGrandDomaineRef>6</idGrandDomaineRef>
+				<idSemestreRef>21</idSemestreRef>
+					<UEs>
+						<UE idUE="221" intituleUE="Introduction à la POO" heuresCMUE="6.75" heuresTDUE="10" heuresTPUE="0">
+							<Epreuves>
+								<Epreuve idEpreuve="221" nomEpreuve="epreuve_poo" coefEpreuve="0.18" natureEpreuve="qcm"></Epreuve>
+							</Epreuves>
+							<enseignantResponsable>10</enseignantResponsable>
+						</UE>
+						<UE idUE="222" intituleUE="Graphes" heuresCMUE="10" heuresTDUE="8.75" heuresTPUE="0" >
+								<Epreuves>
+									<Epreuve idEpreuve="222" nomEpreuve="epreuve_graphes" coefEpreuve="0.18" natureEpreuve="ecrit"></Epreuve>
+									</Epreuves>
+								<enseignantResponsable>13</enseignantResponsable>
+						</UE>
+						<UE idUE="223" intituleUE="BE Graphes" heuresCMUE="0" heuresTDUE="0" heuresTPUE="20" >
+								<Epreuves>
+									<Epreuve idEpreuve="223" nomEpreuve="expose_be_graphes" coefEpreuve="0.18" natureEpreuve="oral_demonstration"></Epreuve>
+								</Epreuves>
+								<enseignantResponsable>13</enseignantResponsable>
+						</UE>
+				</UEs>
+			</UF>
+			<UF codeApogeeUF="I3CCGE41" nomUF="Gestion de l'entreprise et business English" heterogeneUF="true" continueUF="true" evalCompetenceUF="true" totalPresentielUF="88" coefUF="0.166667" ectsUF="5" >
+				<enseignantResponsable>27</enseignantResponsable>
+				<idGrandDomaineRef>7</idGrandDomaineRef>
+				<idSemestreRef>21</idSemestreRef>
+				<UEs>
+					<UE idUE="251" intituleUE="Business Game, Simgest" heuresCMUE="0" heuresTDUE="10" heuresTPUE="0">
+						<Epreuves>
+							<Epreuve idEpreuve="251" nomEpreuve="oral_simgest" coefEpreuve="0.3" natureEpreuve="oral"></Epreuve>
+						</Epreuves>
+						<enseignantResponsable>27</enseignantResponsable>
+					</UE>
+					<UE idUE="252" intituleUE="Gestion financière" heuresCMUE="5" heuresTDUE="0" heuresTPUE="0">
+						<Epreuves>
+							<Epreuve idEpreuve="252" nomEpreuve="qcm_finance" coefEpreuve="0.2" natureEpreuve="qcm"></Epreuve>
+						</Epreuves>
+						<enseignantResponsable>27</enseignantResponsable>
+					</UE>
+					<UE idUE="253" intituleUE="English business" heuresCMUE="0" heuresTDUE="12.5" heuresTPUE="0">
+						<Epreuves>
+							<Epreuve idEpreuve="253" nomEpreuve="exam_english_business" coefEpreuve="0.3" natureEpreuve="oral"></Epreuve>
+						</Epreuves>
+						<enseignantResponsable>28</enseignantResponsable>
+					</UE>
+					<UE idUE="254" intituleUE="LV2" heuresCMUE="0" heuresTDUE="2.5" heuresTPUE="15">
+						<Epreuves>
+							<Epreuve idEpreuve="254" nomEpreuve="exam_lv2" coefEpreuve="0.2" natureEpreuve="comprehension_orale_ecrite"></Epreuve>
+						</Epreuves>
+						<enseignantResponsable>29</enseignantResponsable>
+					</UE>
+				</UEs>
+			</UF>
 		</UFs>
-
-
-
 
 
 		<GrandsDomaines>
 			<GrandDomaine idGrandDomaine="1" nomGrandDomaine="Sciences Appliquées"></GrandDomaine>
 			<GrandDomaine idGrandDomaine="2" nomGrandDomaine="Sciences humaines"></GrandDomaine>
-      <GrandDomaine idGrandDomaine="3" nomGrandDomaine="Tronc commun"></GrandDomaine>
+     		<GrandDomaine idGrandDomaine="3" nomGrandDomaine="Tronc commun"></GrandDomaine>
 			<GrandDomaine idGrandDomaine="4" nomGrandDomaine="Mineure"></GrandDomaine>
 			<GrandDomaine idGrandDomaine="5" nomGrandDomaine="Stages"></GrandDomaine>
+			<GrandDomaine idGrandDomaine="6" nomGrandDomaine="UF Scientifique"></GrandDomaine>
+			<GrandDomaine idGrandDomaine="7" nomGrandDomaine="UF Transverses"></GrandDomaine>
+
 		</GrandsDomaines>
 
 
@@ -235,17 +340,24 @@
 			<Formation idFormation="1" nomFormation="1ère année">
 				<departement>1</departement>
 			</Formation>
-      <Formation idFormation="10" nomFormation="Informatique et Réseaux" acronymeFormation="IR">
+      		<Formation idFormation="10" nomFormation="Informatique et Réseaux" acronymeFormation="IR">
 				<SousFormations>
 					<SousFormation idSousFormation="10" nomSousFormation="Orientation Systèmes Distribués et Big Data" acronymeSousFormation="SDBD"/>
 				</SousFormations>
 				<departement>10</departement>
 			</Formation>
+			<Formation idFormation="21" nomFormation="3STPI" acronymeFormation="3STPI">
+				<SousFormations>
+					<SousFormation idSousFormation="21" nomSousFormation="Informatique et Réseaux" acronymeSousFormation="IR"/>
+				</SousFormations>
+				<departement>21</departement>
+			</Formation>
 		</Formations>
 
 		<Semestres>
 			<Semestre idSemestre="1" nomSemestre="S1"></Semestre>
-      	<Semestre idSemestre="9" nomSemestre="S9"></Semestre>
+      		<Semestre idSemestre="9" nomSemestre="S9"></Semestre>
+			<Semestre idSemestre="21" nomSemestre="S6"></Semestre>
 		</Semestres>
 	</Donnees>
 </GestionMaquettes>

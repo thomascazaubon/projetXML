@@ -55,6 +55,8 @@
 							  <xsl:if test="@idGrandDomaine = 3"> <td class="GD3"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
 							  <xsl:if test="@idGrandDomaine = 4"> <td class="GD4"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
 							  <xsl:if test="@idGrandDomaine = 5"> <td class="GD5"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
+							  <xsl:if test="@idGrandDomaine = 6"> <td class="GD4"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
+							  <xsl:if test="@idGrandDomaine = 7"> <td class="GD5"> <xsl:value-of select="@nomGrandDomaine" ></xsl:value-of></td></xsl:if>
 							</xsl:if>  
 					  </xsl:for-each>  
 					  
