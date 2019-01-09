@@ -93,14 +93,14 @@
 				<idGrandDomaineRef>1</idGrandDomaineRef>
 				<idSemestreRef>1</idSemestreRef>
 				<UEs>
-						<UE idUE="1" intituleUE="APP Optique" heuresCMUE="40.75">
+						<UE idUE="1" intituleUE="APP Optique" heuresCMUE="40.75" heuresTDUE="0" heuresTPUE="0">
 							<Epreuves>
 								<Epreuve idEpreuve="1" nomEpreuve="C1_CC1" coefEpreuve="0.15" natureEpreuve="écrit"></Epreuve>
 							</Epreuves>
 							<enseignantResponsable>1</enseignantResponsable>
 						</UE>
 
-						<UE idUE="2" intituleUE="App de mécanique" heuresCMUE="29.75">
+						<UE idUE="2" intituleUE="App de mécanique" heuresCMUE="29.75" heuresTDUE="0" heuresTPUE="0">
 							<Epreuves>
 								<Epreuve idEpreuve="2" nomEpreuve="E2_Meca" coefEpreuve="0.25" natureEpreuve="écrit"></Epreuve>
 							</Epreuves>
@@ -115,7 +115,7 @@
 						<idGrandDomaineRef>1</idGrandDomaineRef>
 						<idSemestreRef>1</idSemestreRef>
 						<UEs>
-							<UE idUE="3" intituleUE="Algo" heuresCMUE="28">
+							<UE idUE="3" intituleUE="Algo" heuresCMUE="28" heuresTDUE="0" heuresTPUE="0">
 								<Epreuves>
 									<Epreuve idEpreuve="3" nomEpreuve="M1_Moodle" coefEpreuve="0.18" natureEpreuve="qcm"></Epreuve>
 								</Epreuves>
@@ -134,14 +134,14 @@
 					<idGrandDomaineRef>2</idGrandDomaineRef>
 					<idSemestreRef>1</idSemestreRef>
 					<UEs>
-						<UE idUE="4" intituleUE="LV1" heuresCMUE="30">
+						<UE idUE="4" intituleUE="LV1" heuresCMUE="30" heuresTDUE="0" heuresTPUE="0">
 							<Epreuves>
 								<Epreuve idEpreuve="4" nomEpreuve="CC1" coefEpreuve="0.6" natureEpreuve="écrit"></Epreuve>
 							</Epreuves>
 							<enseignantResponsable>6</enseignantResponsable>
 						</UE>
 
-						<UE idUE="5" intituleUE="LV2" heuresCMUE="15">
+						<UE idUE="5" intituleUE="LV2" heuresCMUE="15" heuresTDUE="0" heuresTPUE="0">
 							<Epreuves>
 								<Epreuve idEpreuve="5" nomEpreuve="CC1" coefEpreuve="0.4" natureEpreuve="écrit"></Epreuve>
 							</Epreuves>
@@ -154,7 +154,7 @@
   				<idGrandDomaineRef>3</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   				<UEs>
-  					<UE idUE="10" intituleUE="Ingénierie logicielle" heuresCMUE="11.25" heuresTDUE="8.75">
+  					<UE idUE="10" intituleUE="Ingénierie logicielle" heuresCMUE="11.25" heuresTDUE="8.75" heuresTPUE="0">
   						<Competences>
   							<Competence idCompetence="10" nomCompetence="Dev un logiciel"></Competence>
   						</Competences>
@@ -170,13 +170,13 @@
   				<idGrandDomaineRef>3</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   				<UEs>
-  					<UE idUE="12" intituleUE="Principe de la sureté de fonctionnement" heuresCMUE="13.75" heuresTPUE="8.25">
+  					<UE idUE="12" intituleUE="Principe de la sureté de fonctionnement" heuresCMUE="13.75" heuresTDUE="0" heuresTPUE="8.25">
   						<Epreuves>
   							<Epreuve idEpreuve="10" nomEpreuve="E1" coefEpreuve="0.33" natureEpreuve="Autre"></Epreuve>
   						</Epreuves>
   						<enseignantResponsable>11</enseignantResponsable>
   					</UE>
-  					<UE idUE="13" intituleUE="Modèles temporels" heuresCMUE="6.25">
+  					<UE idUE="13" intituleUE="Modèles temporels" heuresCMUE="6.25" heuresTDUE="0" heuresTPUE="0">
   						<Epreuves>
   							<Epreuve idEpreuve="11" nomEpreuve="E2" coefEpreuve="0.33" natureEpreuve="IE"></Epreuve>
   						</Epreuves>
@@ -189,10 +189,10 @@
   				<idGrandDomaineRef>3</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   				<UEs>
-  					<UE idUE="14" intituleUE="Analyse exploratoire et visualisation de données" heuresCMUE="10" heuresTPUE="13.75">
+  					<UE idUE="14" intituleUE="Analyse exploratoire et visualisation de données" heuresCMUE="10" heuresTDUE="0" heuresTPUE="13.75">
   						<enseignantResponsable>13</enseignantResponsable>
   					</UE>
-  					<UE idUE="15" intituleUE="Apprentissage" heuresCMUE="12.5" heuresTPUE="13.75">
+  					<UE idUE="15" intituleUE="Apprentissage" heuresCMUE="12.5" heuresTDUE="0" heuresTPUE="13.75">
   						<enseignantResponsable>13</enseignantResponsable>
   					</UE>
   				</UEs>
@@ -207,13 +207,13 @@
   				<idGrandDomaineRef>4</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   				<UEs>
-  					<UE idUE="16" intituleUE="Transitoire" heuresCMUE="6.25" heuresTPUE="5.5">
+  					<UE idUE="16" intituleUE="Transitoire" heuresCMUE="6.25" heuresTDUE="0" heuresTPUE="5.5">
   						<enseignantResponsable>13</enseignantResponsable>
   					</UE>
-  					<UE idUE="17" intituleUE="Méthodes et outils" heuresCMUE="20" heuresTPUE="13.75">
+  					<UE idUE="17" intituleUE="Méthodes et outils" heuresCMUE="20" heuresTDUE="0" heuresTPUE="13.75">
   						<enseignantResponsable>13</enseignantResponsable>
   					</UE>
-  					<UE idUE="17" intituleUE="Projet analyse prescriptive" heuresCMUE="1.25" heuresTPUE="13.75">
+  					<UE idUE="17" intituleUE="Projet analyse prescriptive" heuresCMUE="1.25" heuresTDUE="0" heuresTPUE="13.75">
   						<enseignantResponsable>13</enseignantResponsable>
   					</UE>
   				</UEs>
@@ -223,7 +223,7 @@
   				<idGrandDomaineRef>4</idGrandDomaineRef>
   				<idSemestreRef>9</idSemestreRef>
   				<UEs>
-  					<UE idUE="18" intituleUE="Virtualisation de fonctions réseaux" heuresCMUE="6.25" heuresTPUE="13.75">
+  					<UE idUE="18" intituleUE="Virtualisation de fonctions réseaux" heuresCMUE="6.25" heuresTDUE="0" heuresTPUE="13.75">
   						<enseignantResponsable>16</enseignantResponsable>
   					</UE>
   				</UEs>

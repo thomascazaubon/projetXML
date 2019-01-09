@@ -56,6 +56,9 @@ border-block-start-width: 0px;
 .UF{
 	font-size:1.2em;
 }
+.UE{
+	text-align: left;
+}
 .email{
 	width: 18.5em;
 }
@@ -71,9 +74,16 @@ border-block-start-width: 0px;
 .GD3{
 	background-color:#2ecc71;
 }
-.GD4{
+.GD4, .GD6{
 	background-color:#9b59b6;
 }
-.GD5{
+.GD5, .GD7{
 	background-color:#1abc9c;
+}
+.none {
+	display:none;
+}
+
+.nomEnseignant span {
+	padding : 0px 2px;
 }
