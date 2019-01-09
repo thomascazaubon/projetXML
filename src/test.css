@@ -87,3 +87,7 @@ border-block-start-width: 0px;
 .nomEnseignant span {
 	padding : 0px 2px;
 }
+.profs {
+	display : flex;
+	justify-content: space-around;
+}

@@ -129,10 +129,11 @@
 				</tr>
         	</xsl:for-each>		
 			</table>
+			<section class="profs">
 			<xsl:for-each select="./UF">
 
 				 
-
+			
 			 	<xsl:variable name="code" select='.' />
 				<xsl:for-each select="/GestionMaquettes/Donnees/UFs/UF">  
 					<xsl:if test="@codeApogeeUF = $code">  
@@ -141,14 +142,17 @@
 								<xsl:if test="@idEnseignant = $codeER">
 									<section class="EnseignantUF" data-id="{$codeER}">
 										<p class="nomEnseignant"><xsl:value-of select="@prenomEnseignant" ></xsl:value-of><span></span><xsl:value-of select="@nomEnseignant" ></xsl:value-of></p>
-										<p><xsl:value-of select="@emailEnseignant" ></xsl:value-of></p>
-
+										<p><xsl:value-of select="@gradeEnseignant" ></xsl:value-of></p>
+										<p>Email : <xsl:value-of select="@emailEnseignant" ></xsl:value-of></p>
+										<p>Tel : <xsl:value-of select="@telEnseignant" ></xsl:value-of></p>
+										<p>Bureau : <xsl:value-of select="@bureauEnseignant" ></xsl:value-of></p>
 									</section>
 								</xsl:if> 
 							</xsl:for-each>
 					</xsl:if>
 				</xsl:for-each>
 			</xsl:for-each>
+			</section>
 <!--			<xsl:for-each select="objet[not(@attribut = preceding-sibling::objet/@attribut)]"> 
 			
  A VOIR CETTE METHODE POUR SELECT QU'UNE FOIS !!
