@@ -21,7 +21,14 @@
     </head>
 
     <body>
-	<xsl:for-each select="GestionMaquettes/Maquettes/Maquette">
+		<blockquote><xsl:apply-templates select="GestionMaquettes/Maquettes/Maquette"/></blockquote>
+	</body>
+	<script defer="" src="jquery.js"/>
+  	<script defer="" src="app.js"/>
+    </html>    
+</xsl:template>     
+
+<xsl:template match="Maquette">
 		<section class="maquette">
         <h2 class="titre_maquette">Maquette de : <xsl:value-of select="@nomMaquette" ></xsl:value-of></h2>
 		<section>
@@ -120,41 +127,6 @@
 			</section>
 		</section>
 	</section>
-	</xsl:for-each>	
-
-<!-- <h2>Liste des noms :</h2>
-		
-
-        <xsl:for-each select="enseignants/enseignant">
-			<xsl:sort select="./nom"
-lang="language-code"
-data-type="text"
-order="ascending"
-case-order="upper-first"/> 
-            <p>Nom : <xsl:value-of select="./nom" ></xsl:value-of></p>
-
-
-        </xsl:for-each>
-
-<h2>Liste des dep :</h2>
-		
-
-        <xsl:for-each select="enseignants/enseignant[not( preceding::enseignant/departement = departement )]">
-			<xsl:sort select="./departement"
-lang="language-code"
-data-type="text"
-order="ascending"
-case-order="upper-first"/> 
-            <p>Nom : <xsl:value-of select="./departement" ></xsl:value-of></p>
-
-
-        </xsl:for-each> -->
-
-    </body>
-	<script defer="" src="jquery.js"/>
-  	<script defer="" src="app.js"/>
-    </html>         
-
 </xsl:template>
 </xsl:stylesheet>
 
