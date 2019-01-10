@@ -23,7 +23,7 @@
     <body>
 
     	<section class="choose_maquette">
-    		<h3>Choisissez votre maquette :</h3>
+    		<h3>Choisissez vos maquettes :</h3>
     		<xsl:for-each select="GestionMaquettes/Maquettes/Maquette">
 				<xsl:variable name="maquetteid" select='@nomMaquette' /> 
 				<button class="btnmaquette" data-id="{$maquetteid}"><xsl:value-of select="@nomMaquette" ></xsl:value-of></button>
