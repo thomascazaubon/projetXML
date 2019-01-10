@@ -21,6 +21,14 @@
     </head>
 
     <body>
+
+    	<section class="choose_maquette">
+    		<h3>Choisissez votre maquette :</h3>
+    		<xsl:for-each select="GestionMaquettes/Maquettes/Maquette">
+				<xsl:variable name="maquetteid" select='@nomMaquette' /> 
+				<button class="btnmaquette" data-id="{$maquetteid}"><xsl:value-of select="@nomMaquette" ></xsl:value-of></button>
+			</xsl:for-each>
+    	</section>
 		<blockquote><xsl:apply-templates select="GestionMaquettes/Maquettes/Maquette"/></blockquote>
 	</body>
 	<script defer="" src="jquery.js"/>
@@ -29,7 +37,8 @@
 </xsl:template>     
 
 <xsl:template match="Maquette">
-		<section class="maquette">
+		<xsl:variable name="maquetteid" select='@nomMaquette' /> 
+		<section class="maquette none" data-id="{$maquetteid}">
         <h2 class="titre_maquette">Maquette de : <xsl:value-of select="@nomMaquette" ></xsl:value-of></h2>
 		<section>
 			<table>
@@ -39,7 +48,7 @@
 				<th class="petit">Obligatoire</th>	
 				<th>Code Apogee</th>
 				<th>Nom UF / UE</th>				
-				<th class="email">Email Responsable</th>				
+				<th class="email">Responsable</th>				
 				<th class="petit">Hétérogène</th>				
 				<th class="petit">Continuité</th>				
 				<th class="petit">Eval par compétences</th>
@@ -64,10 +73,10 @@
 					</xsl:for-each>
 				</td>
 				<td class="case_uf">
-					<p class="UF"><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@emailEnseignant" ></xsl:value-of></p>
+					<p class="UF"><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@prenomEnseignant" ></xsl:value-of><span></span><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@nomEnseignant" ></xsl:value-of></p>
 					<xsl:for-each select="//UF[@codeApogeeUF = $code]/UEs/UE"> 
 						<xsl:variable name="codeERUE" select='./enseignantResponsable' />
-						<p class="UE"><xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@emailEnseignant" ></xsl:value-of></p>
+						<p class="UE"><xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@prenomEnseignant" ></xsl:value-of><span></span><xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@nomEnseignant" ></xsl:value-of></p>
 					</xsl:for-each> 
 				</td>
 				<td><xsl:choose>
@@ -111,19 +120,48 @@
 				</tr>
         	</xsl:for-each>		
 			</table>
-
-			<section class="profs">
-				<xsl:for-each select="./UF">
-				 	<xsl:variable name="code" select='.' />
-					<xsl:variable name="codeER" select='//UF[@codeApogeeUF = $code]/enseignantResponsable' />
-					<section class="EnseignantUF" data-id="{$codeER}">
-						<p class="nomEnseignant"><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@prenomEnseignant" ></xsl:value-of><span></span><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@nomEnseignant" ></xsl:value-of></p>
-						<p><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@gradeEnseignant" ></xsl:value-of></p>
-						<p>Email : <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@emailEnseignant" ></xsl:value-of></p>
-						<p>Tel : <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@telEnseignant" ></xsl:value-of></p>
-						<p>Bureau : <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@bureauEnseignant" ></xsl:value-of></p>
+			<section class="infos">
+				<section class="dep">
+					<xsl:variable name="codeD" select='./Departement' />
+					<xsl:variable name="codeER" select='//Departement[@idDepartement = $codeD]/chefDeDepartement' />
+					<section class="info_dep">
+						<h3 class="titre_info_dep">Département <xsl:value-of select="//Departement[@idDepartement = $codeD]/@nomDepartement" ></xsl:value-of> (<xsl:value-of select="//Departement[@idDepartement = $codeD]/@acronymeDepartement" ></xsl:value-of>)</h3>
+						<section class="EnseignantDep" data-id="{$codeD}D{$codeER}">
+							<p>Responsable du département :</p>
+							<p class="nomEnseignant"><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@prenomEnseignant" ></xsl:value-of><span></span><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@nomEnseignant" ></xsl:value-of></p>
+							<p><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@emailEnseignant" ></xsl:value-of> - <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@telEnseignant" ></xsl:value-of></p>
+							<p>Bureau : <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@bureauEnseignant" ></xsl:value-of></p>
+						</section>
 					</section>
-				</xsl:for-each>
+				</section>
+				<section class="infos_profs">
+					<h3 class="titre_profs">Liste des enseignants de la maquette :</h3>
+					<section class="profs">
+
+						<xsl:for-each select="./UF">
+						 	<xsl:variable name="code" select='.' />
+							<xsl:variable name="codeER" select='//UF[@codeApogeeUF = $code]/enseignantResponsable' />
+							<section class="EnseignantUF" data-id="{$codeER}">
+								<section class="titreEnseignent"><p class="nomEnseignant"><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@prenomEnseignant" ></xsl:value-of><span></span><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@nomEnseignant" ></xsl:value-of></p>
+								<p><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@gradeEnseignant" ></xsl:value-of></p></section>
+								<p><xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@emailEnseignant" ></xsl:value-of> - <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@telEnseignant" ></xsl:value-of></p>
+								<p>Département <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/../../@acronymeDepartement" ></xsl:value-of></p>
+								<p>Bureau : <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/@bureauEnseignant" ></xsl:value-of></p>
+							</section>
+							<xsl:for-each select="//UF[@codeApogeeUF = $code]/UEs/UE"> 
+								<xsl:variable name="codeERUE" select='./enseignantResponsable' />
+									<section class="EnseignantUF" data-id="{$codeERUE}">
+									<p class="nomEnseignant"><xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@prenomEnseignant" ></xsl:value-of><span></span><xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@nomEnseignant" ></xsl:value-of></p>
+									<p><xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@gradeEnseignant" ></xsl:value-of></p>
+									<p><xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@emailEnseignant" ></xsl:value-of> - <xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@telEnseignant" ></xsl:value-of></p>
+									<p>Département <xsl:value-of select="//Enseignant[@idEnseignant = $codeER]/../../@acronymeDepartement" ></xsl:value-of></p>
+									<p>Bureau : <xsl:value-of select="//Enseignant[@idEnseignant = $codeERUE]/@bureauEnseignant" ></xsl:value-of></p>
+								</section>
+							</xsl:for-each> 
+						</xsl:for-each>
+
+					</section>
+				</section>
 			</section>
 		</section>
 	</section>

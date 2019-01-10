@@ -9,4 +9,14 @@ $(document).ready(function() {
 	  }
 	});
 	
+	$('.btnmaquette').click(function(){
+		var idmaquette = $(this).attr('data-id');
+		if($(".maquette[data-id='" + idmaquette +"']").hasClass('none')){
+			$(".maquette[data-id='" + idmaquette +"']").removeClass('none');
+			$(this).addClass('click');
+		} else {
+			$(".maquette[data-id='" + idmaquette +"']").addClass('none');
+			$(this).removeClass('click');
+		}
+	});
 });
