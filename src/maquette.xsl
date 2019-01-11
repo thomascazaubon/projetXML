@@ -40,6 +40,13 @@
 		<xsl:variable name="maquetteid" select='@nomMaquette' /> 
 		<section class="maquette none" data-id="{$maquetteid}">
         <h2 class="titre_maquette">Maquette de : <xsl:value-of select="@nomMaquette" ></xsl:value-of></h2>
+        <xsl:variable name="codeSSF" select='./SousFormation' />
+		<xsl:variable name="codeF" select='./Formation' />
+		<h3 class="titre_maquette"><xsl:value-of select="//Formation[@idFormation = $codeF]/@acronymeFormation" ></xsl:value-of>
+			<xsl:choose>
+				<xsl:when test="$codeSSF != ''"> - <xsl:value-of select="//SousFormation[@idSousFormation = $codeSSF]/@nomSousFormation" ></xsl:value-of></xsl:when>
+				<xsl:otherwise></xsl:otherwise>
+			</xsl:choose></h3>
 		<section>
 			<table>
 			<tr>

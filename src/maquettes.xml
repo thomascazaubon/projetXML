@@ -16,6 +16,7 @@
     	<Maquette nomMaquette="5A SDBD">
 			<Departement>10</Departement>
 			<Formation>10</Formation>
+			<SousFormation>10</SousFormation>
 			<UF>I5IRIL12</UF>
 			<UF>I5IRSF11</UF>
 			<UF>I5IRAD12</UF>
@@ -28,6 +29,7 @@
 		<Maquette nomMaquette="3MIC IR">
 			<Departement>1</Departement>
 			<Formation>21</Formation>
+			<SousFormation>21</SousFormation>
 			<UF>I3MIIF21</UF>
 			<UF>I3MIIL11</UF>
 			<UF>I3CCGE41</UF>
@@ -337,7 +339,7 @@
 
 
 		<Formations>
-			<Formation idFormation="1" nomFormation="1ère année">
+			<Formation idFormation="1" nomFormation="1STPI" acronymeFormation="1STPI">
 				<departement>1</departement>
 			</Formation>
       		<Formation idFormation="10" nomFormation="Informatique et Réseaux" acronymeFormation="IR">

@@ -159,6 +159,12 @@
 		    	<xs:field xpath="Formation" />
 		  	</xs:keyref>
 	  </xs:element>
+      <xs:element name="SousFormation" type="xs:token" minOccurs="0" maxOccurs="1">
+			<xs:keyref name="MqtSousFormationRef" refer="SousFormationKey">
+		    	<xs:selector xpath="." />
+		    	<xs:field xpath="SousFormation" />
+		  	</xs:keyref>
+	  </xs:element>
       <xs:element name="UF" type="xs:token" minOccurs="1" maxOccurs="unbounded">
 			<xs:keyref name="MqtUFRef" refer="UFKey">
 		    	<xs:selector xpath="." />
