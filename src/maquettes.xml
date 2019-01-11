@@ -347,6 +347,7 @@
       		<Formation idFormation="10" nomFormation="Informatique et Réseaux" acronymeFormation="IR">
 				<SousFormations>
 					<SousFormation idSousFormation="10" nomSousFormation="Orientation Systèmes Distribués et Big Data" acronymeSousFormation="SDBD"/>
+					<SousFormation idSousFormation="11" nomSousFormation="Sécurité" acronymeSousFormation="TLS-SEC"/>
 				</SousFormations>
 				<departement>10</departement>
 			</Formation>
