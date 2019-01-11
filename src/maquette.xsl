@@ -60,7 +60,7 @@
 				<th class="petit">Continuité</th>				
 				<th class="petit">Eval par compétences</th>
 				<th>CM - TD - TP</th>			
-				<th>Total Présentiel</th>
+				<th>Total Présentiel</th>	
 				<th class="petit">Coef</th>				
 				<th class="petit">ECTS</th>		
 			</tr>
@@ -122,7 +122,14 @@
 						<p><xsl:value-of select="@heuresTPUE + @heuresTDUE + @heuresCMUE" ></xsl:value-of></p>
 					</xsl:for-each>
 				</td> 
-				<td> <xsl:value-of select="//UF[@codeApogeeUF = $code]/@coefUF" ></xsl:value-of> </td>
+				<td> <xsl:value-of select="//UF[@codeApogeeUF = $code]/@coefUF" ></xsl:value-of> 
+					<xsl:for-each select="//UF[@codeApogeeUF = $code]/UEs/UE"> 
+						<p class="UE"><xsl:choose>
+							<xsl:when test="sum(./Epreuves/Epreuve/@coefEpreuve) != 0"><xsl:value-of select="sum(./Epreuves/Epreuve/@coefEpreuve)" ></xsl:value-of></xsl:when>
+							<xsl:otherwise></xsl:otherwise>
+						</xsl:choose>
+						</p>
+					</xsl:for-each></td>
 				<td> <xsl:value-of select="//UF[@codeApogeeUF = $code]/@ectsUF" ></xsl:value-of> </td> 		
 				</tr>
         	</xsl:for-each>		
