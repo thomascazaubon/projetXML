@@ -4,7 +4,7 @@ html{
 	color:#00042d;
 }
 table, tbody{
-	display: block;
+	/*display: block;*/
 }
 table {
 	 border-width:1px; 
